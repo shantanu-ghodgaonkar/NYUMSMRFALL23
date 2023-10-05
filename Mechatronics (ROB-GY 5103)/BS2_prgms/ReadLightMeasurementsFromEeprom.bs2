@@ -1,0 +1,15 @@
+' What's a Microcontroller - ReadLightMeasurementsFromEeprom.bs2
+' Read light measurements from EEPROM.
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+time VAR Word
+eepromAddress VAR Byte
+PAUSE 1000
+DEBUG "Retrieving measurements", CR, CR,
+"Measurement Value", CR,
+"---------- -----", CR
+FOR eepromAddress = 0 TO 58 STEP 2
+READ eepromAddress, Word time
+DEBUG DEC2 eepromAddress, " ", DEC time, CR
+NEXT
+END

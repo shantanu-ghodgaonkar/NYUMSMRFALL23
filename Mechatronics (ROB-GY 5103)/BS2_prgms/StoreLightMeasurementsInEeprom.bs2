@@ -1,0 +1,19 @@
+' What's a Microcontroller - StoreLightMeasurementsInEeprom.bs2
+' Write light measurements to EEPROM.
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+time VAR Word
+eepromAddress VAR Byte
+PAUSE 1000
+DEBUG "Starting measurements...", CR, CR, "Measurement Value", CR, "----------- -----", CR
+FOR eepromAddress = 0 TO 58 STEP 2
+HIGH 2
+PAUSE 1000
+RCTIME 2, 1, time
+DEBUG DEC2 eepromAddress,
+" ", DEC time, CR
+WRITE eepromAddress, Word time
+NEXT
+DEBUG "All done. Now, run:", CR,
+"ReadLightMeasurementsFromEeprom.bs2"
+END

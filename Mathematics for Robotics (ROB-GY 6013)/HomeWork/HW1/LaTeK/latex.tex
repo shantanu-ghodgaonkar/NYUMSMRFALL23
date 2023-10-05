@@ -1,0 +1,232 @@
+\documentclass[a4paper]{article}
+%\usepackage[T1]{fontenc}
+\usepackage{enumitem, amsmath, gensymb, graphicx, caption, amssymb, geometry, fancyhdr}
+%\usepackage{amsmath}
+%\usepackage{gensymb}
+%\usepackage{graphicx}
+%\usepackage{caption}
+%\usepackage[utf8]{inputenc}
+
+\geometry{left=1in, right=1in, top=1in, bottom=1in}
+\pagestyle{fancy}
+
+\newcommand{\myName}{\textbf{Shantanu Ghodgaonkar}\\\textit{Univ ID}: N11344563\\\textit{Net ID}: sng8399\\\textit{Ph.No.}: +1 (929) 922-0614}
+\newlist{qalist}{description}{1}
+\setlist[qalist]{style=unboxed,leftmargin=0.5cm,labelwidth=2.5cm}
+
+
+\title{Homework 1 Answers : ROB-GY 6003}
+\author{\myName}
+\date{\today}
+
+%\fancyhf{} % Clear existing header/footer settings
+\fancyhead{} % Clear existing header settings 
+\fancyhead[L]{\today}
+%\fancyhead[C]{Center Header}
+\fancyhead[R]{N11344563}
+
+
+\begin{document}
+	
+	\begin{titlepage}
+	    \centering
+	    \vspace{2cm}
+	    \Huge\textbf{Mathematics for Robotics \\ ROB-GY 6103 \\ Homework 1 Answers}
+	    \vspace{1cm}
+	    \\ \Large \today
+	    \vfill
+	    \Large \myName
+	\end{titlepage}
+	
+	\begin{qalist}			
+		\item[Question: 1. (a)] \setcounter{equation}{0} Negate $(P \land Q)$ 
+		\item[Answer:] We must find the negation of the given expression $(P \land Q)$ 
+			\begin{center}
+				According to De Morgan's Laws, $\sim (P \land Q) = \; \sim P \; \lor \sim Q$
+				
+				
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					P & Q & \(P \land Q\) & \(\sim (P \land Q)\) & \(\sim P\) & \(\sim Q\) & \( \; \sim P \; \lor \sim Q \) \\
+					\hline
+					F & F & F & T & T & T & T \\
+					F & T & F & T & T & F & T \\
+					T & F & F & T & F & T & T \\
+					T & T & T & F & F & F & F \\
+					\hline
+				\end{tabular}
+			\end{center}
+			
+			
+		\item[Question: 1. (b)] \setcounter{equation}{0} Negate $(P \lor Q)$ 
+		\item[Answer:] We must find the negation of the given expression $(P \lor Q)$ 
+			\begin{center}
+				According to De Morgan's Laws, $\sim (P \lor Q) = \; \sim P \; \land \sim Q$
+				
+				
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					P & Q & \(P \lor Q\) & \(\sim (P \land Q)\) & \(\sim P\) & \(\sim Q\) & \( \; \sim P \; \lor \sim Q \) \\
+					\hline
+					F & F & F & T & T & T & T \\
+					F & T & T & F & T & F & F \\
+					T & F & T & F & F & T & F \\
+					T & T & T & F & F & F & F \\
+					\hline
+				\end{tabular}
+			\end{center}
+		
+		\item[Question: 2. (a)] Negate $P$ : ``For every integer n, 2n + 1 is odd.''
+		\item[Answer:] $\sim P$ : ``For some integer n, 2n + 1 is not odd''
+		
+		\item[Question: 2. (b)] Negate $P$ : ``For some integer n, 2n + 1 is prime.''
+		\item[Answer:] $\sim P$ : ``For every integer n, 2n + 1 is not prime''
+		
+		\item[Question: 2. (c)] Let A be an $n \times n$ real matrix and $\lambda \in \mathbb{R}$. $P$:`` $\exists\; v \in \mathbb{R}^{n} , v \neq 0, such\;that \; Av = \lambda v.$'' 
+		\item[Answer:] $\sim P$ : ``$\forall\; v \in \mathbb{R}^{n} , v \neq 0, such\;that \; Av \neq \lambda v$''
+		
+		\item[Question: 2. (d)] Let \textit{f} : $\mathbb{R} \rightarrow \mathbb{R}$ be a function. $P$: ``$\forall \; \eta > 0, \exists \; \delta > 0 \; such \; that \; |x| \leq \delta \Rightarrow |f(x)| \leq \eta |x|$''
+		\item[Answer:] $\sim P$ : ``$\exists \; \eta > 0, \forall \; \delta > 0 \; such \; that \; |x| \leq \delta \Rightarrow |f(x)| > \eta |x|$''
+		
+		\item[Question: 3.] \setcounter{equation}{0} Prove that $\sqrt{7}$ is irrational. \\Assume that ``Let $m$ be an integer. If 7 divides ${m}^{2}$, then 7 also divides m'' is \textit{true}
+		\item[Answer:] We will prove this by contradiction. Suppose that $\sqrt{7}$ is a rational number. \\
+		Then there exist two  integer $p$ and $q$ without common factors such that, 
+		\begin{equation}
+			\sqrt{7} = \frac{p}{q}
+		\end{equation}
+		Squaring both sides, 
+		\begin{equation}
+			7 = \frac{{p}^{2}}{{q}^{2}}
+		\end{equation}
+		Rearranging ${Eq}^{n} (2)$, 
+		\begin{equation}
+			7{q}^{2} = {p}^{2}
+		\end{equation}
+		${Eq}^{n} (3) \Rightarrow {p}^{2}$ is a multiple of 7 $\Rightarrow$ 7 is a factor of p (Using given assumption)$\rightarrow (3.1)$ \\
+		\\ Consider, $\exists \; r \in \mathbb{Q} \;|\; p = 7r \leftarrow$ substitute in ${Eq}^{n} (3)$
+		\begin{equation}
+			7{q}^{2} = 49{r}^{2}
+		\end{equation}
+		\begin{equation}
+			{q}^{2} = 7{r}^{2}
+		\end{equation}
+		${Eq}^{n} (5) \Rightarrow {q}^{2}$ is a multiple of 7 $\Rightarrow$ 7 is a factor of q (Using given assumption)$\rightarrow (5.1)$ \\
+		
+		From statements (3.1) \& (5.1) we can deduce that $p$ and $q$ do have the common factor of 7, which goes against the definition of rational numbers. \\
+		$\therefore$ by Contradiction, $\sqrt{7}$ is irrational. \textbf{QED}.
+		
+		\item[Question: 4. ] \setcounter{equation}{0} Let $A$ be a square matrix. Prove: if $det(A) = 0$, then $A$ is not invertible. 
+		\item[Answer:]  We shall prove this by contradiction.
+		
+		Consider a square matrix $A$ such that $det(A) = 0$ and assume that $A$ is invertible.
+		
+		$\Rightarrow$ there exists a matrix, $A'$, such that, \begin{equation}A \times A' = I\end{equation}
+		
+		Now, take the determinant of both sides,
+		\begin{equation}
+			det(A \times A') = det(I)
+		\end{equation}
+		It is given that $det(AB) = det(A)det(B)$; Applying this relation, we get, 
+		\begin{equation}
+			det(A) \times det(A') = det(I)
+		\end{equation}
+		
+		We know that, det(I) = 1 and it is given that det(A) = 0
+		
+		\begin{equation}
+			0 \times det(A') = 1
+		\end{equation}
+		
+		\begin{equation}
+			\Rightarrow 0 = 1
+		\end{equation}
+		
+		${Eq}^{n} (5)$ states an impossibilty $\Rightarrow$ our initial assumption that $A$ is invertible was $wrong$.\\
+		$\therefore$ a materix $A$ having $det(A) = 0$ is $Non-Invertible$. \textbf{QED}
+		
+		\item[Question: 5. ] \setcounter{equation}{0} Prove that, for all integers, \[n \geq 1, \; \sum_{k=1}^{n} \frac{1}{k(k+1)} = \frac{n}{n+1}\]
+		\item[Answer:]  We shall prove the given statement using standard induction.
+			
+			\begin{itemize}
+				\item \underline{Step 0} : For $n \in \mathbb{Q} | n \geq 1$, $P(n) = \sum_{k=1}^{n} \frac{1}{k(k+1)} = \frac{n}{n+1}$ 
+				\item \underline{Step 1} : For the base case, n = 1, 
+					\[ P(1) = \sum_{k=1}^{1} \frac{1}{k(k+1)} = \frac{1}{1+1}\]
+					\[\frac{1}{1(1+1)} = \frac{1}{2}\]
+					\[\therefore \frac{1}{2} = \frac{1}{2}\]
+					
+				\item \underline{Step 2} : Now, we must show that the induction hypothesis is true. Using the fact that for $1 \geq j \geq k$, show that $P(k+1)$ is true.
+					So for, $n = k + 1$ 
+					\[\Rightarrow P(k + 1) = \sum_{k=1}^{k+1} \frac{1}{k(k+1)} = \frac{k+1}{(k+1)+1}\]
+					\[= \sum_{k=1}^{k} \frac{1}{k(k+1)} +  \frac{1}{(k+1)((k+1)+1)} = \frac{k+1}{(k+1)+1}\]
+					\[= \frac{k}{k+1} +  \frac{1}{(k+1)((k+1)+1)} = \frac{k+1}{(k+1)+1}\]
+					\[= \frac{k}{k+1} +  \frac{1}{(k+1)(k+2)} = \frac{k+1}{k+2}\]
+					Finding the LCM of the LHS,
+					\[= \frac{k(k+2) + 1}{(k+1)(k+2)} = \frac{k+1}{k+2}\]
+					Cancelling out $(k+2)$ on the denominator for both sides, 
+					\[= \frac{k(k+2) + 1}{(k+1)} = k+1\]
+					Mulitplying the numerator on both sides by $(k+1)$,
+					\[= k(k+2) + 1 = (k+1)(k+1)\]
+					\[= {k}^{2} + 2k + 1 = {(k+1)}^{2}\]
+					Rewriting LHS, 
+					\[={(k+1)}^2 ={(k+1)}^{2}\]
+					Dividing both sides by $(k+1)$,
+					\[=k+1 = k+1\]
+					\[\therefore LHS = RHS\]
+				Hence, $P(k + 1)$ is true. Because we have shown that $P(1)$ is true and for all $n \geq 1$,$ P(n) \Rightarrow P(n + 1)$, by the Principle of Induction, we conclude that, 
+				\[ \forall n \in \mathbb{Q} | n \geq 1\;, \;P(n) = \sum_{k=1}^{n} \frac{1}{k(k+1)} = \frac{n}{n+1}\]
+				\textbf{QED}.
+			\end{itemize}
+
+		
+		\item[Question: 6. (a)] \setcounter{equation}{0} Prove that, for all integers, $n \geq 12$, there exist non-negative integers ${k}_{1}$ and ${k}_{2}$ such that $n = {k}_{1} 4 + {k}_{2} 5$. Is the same statement true for $n \geq 8$ ?
+		\item[Answer:]  We shall prove the given statement using strong induction.
+			
+			\begin{itemize}
+				\item \underline{Step 0} : For $n \geq 12$, $P(n): \exists \; {k}_{1}, {k}_{2} \in \mathbb{Q} \;and\; {k}_{1}, {k}_{2} \geq 0 \; | \; n = {k}_{1} 4 + {k}_{2} 5$ 
+				\item \underline{Step 1} : For the base case, n = 12, 
+					\[ P(12) : 12 = {k}_{1}4 + {k}_{2}5 \]
+					Substituting ${k}_{1} = 3$ and ${k}_{2} = 0$, 
+					\[ P(12) : 12 = 3\cdot4 + 0\cdot5 \]
+					\[ P(12) : 12 = 12 \]
+				\item \underline{Step 2} : Now, we must show that the induction hypothesis is true. Using the fact that for $12 \geq j \geq k$, show that $P(k+1)$ is true.
+					\\So for, $n = k + 1$ 
+					\[\Rightarrow k + 1 \geq 12\]
+					\[k \geq 13\]
+					Condsider the base case here, n = 13
+					\[P(13) : 13 ={k}_{1}4 + {k}_{2}5 \]
+					Substituting ${k}_{1} = 2$ and ${k}_{2} = 1$, 
+					\[ P(13) : 13 = 2\cdot4 + 1\cdot5 \]
+					\[ P(13) : 13 = 13 \]
+					$\therefore$ We can see that this satisfies the original statement and has already been proven by the induction hypothesis. \textbf{QED}.
+				\item \underline{Is it true for $n \geq 8$ ?}
+				
+				Consider the case $n=11$, 
+				\[\Rightarrow P(11) : 11 = {k}_{1}4 + {k}_{2}5\]
+				Upon observing the above equation, we can deduce that there is no possible combination of non-negative integers ${k}_{1}, {k}_{2}$ that can satisfy the relation. 
+				
+				$\therefore$ the given equation is false for $n \geq 8$. \textbf{QED}.
+			\end{itemize}
+		
+		\item[Question: 6. (b)] \setcounter{equation}{0} Prove that, for all \underline{even} integers, $n \geq 6$, there exist non-negative integers ${k}_{1}$ and ${k}_{2}$ such that $n = {k}_{1} 3 + {k}_{2} 5$. 
+		\item[Answer:]  We shall prove the given statement using strong induction.
+			
+			\begin{itemize}
+				\item \underline{Step 0} : For $n \geq 6 | n = 2x$ where $x \in \mathbb{N}$, $P(n): \exists \; {k}_{1}, {k}_{2} \in \mathbb{Q} \;and\; {k}_{1}, {k}_{2} \geq 0 \; | \; n = {k}_{1} 3 + {k}_{2} 5$ 
+				\item \underline{Step 1} : For the base case, n = 6, 
+					\[ P(6) : 6 = {k}_{1}3 + {k}_{2}5 \]
+					Substituting ${k}_{1} = 2$ and ${k}_{2} = 0$, 
+					\[ P(6) : 6 = 2\cdot3 + 0\cdot5 \]
+					\[ P(6) : 6 = 6 \]
+				\item \underline{Step 2} : Now, we must show that the induction hypothesis is true. Using the fact that for $6 \geq j \geq k$, show that $P(k+1)$ is true.
+					\\So for, $n = k + 1$ 
+					\[\Rightarrow k + 1 \geq 6\]
+					\[k \geq 7\]
+					Condsider the base case here, n = 8 (as 7 is an odd number)
+					\[P(8) : 8 ={k}_{1}3 + {k}_{2}5 \]
+					Substituting ${k}_{1} = 1$ and ${k}_{2} = 1$, 
+					\[ P(8) : 8 = 1\cdot3 + 1\cdot5 \]
+					\[ P(8) : 8 = 8 \]
+					$\therefore$ We can see that this satisfies the original statement and has already been proven by the induction hypothesis. \textbf{QED}.
+			\end{itemize}
+	\end{qalist}
+\end{document}

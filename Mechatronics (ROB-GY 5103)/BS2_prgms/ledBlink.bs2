@@ -1,0 +1,9 @@
+'{$STAMP BS2}
+'{$PBASIC 2.5}
+DEBUG "The LED connected to P14 is blinking!"
+DO
+  HIGH 14
+  PAUSE 500
+  LOW 14
+  PAUSE 500
+LOOP
