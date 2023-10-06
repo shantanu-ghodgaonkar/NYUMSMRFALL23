@@ -245,6 +245,7 @@
 			
 			$\therefore \; span\{\mathcal{S}\} \subset \mathcal{Y}.$ \textbf{Q.E.D.} 
 		
+		\newpage
 		\item[Question: 5.] \setcounter{equation}{0}  %Let (X, F) be a vector space and V and W subspaces of X. Prove that $V \cap W = \{0\}$
 		%For every $x \in V + W$, there exist unique $v \in V$ and $w \in W$ such that x = v + w
 		\item[Answer:] Nagy Pg 115 Proof of Thm 4.1.14
@@ -374,14 +375,19 @@
 			Now, look for a matrix P to switch from $e$ to ${u}_{s}$: 
 			\[{[x]}_{{u}_{s}} = P{[x]}_{e}\]
 						
-			We shall work column by column, 
+			But as it is easier to find $\bar{P}$ first, we shall do it by working column by column, 
 			\renewcommand{\arraystretch}{1.5}
-			\[P = \left[\begin{array}{c:c:c} {P}_{1} &  {P}_{2} & {P}_{3}\end{array}\right]\]
+			\[\bar{\bar{P}} = \left[\begin{array}{c:c:c} {\bar{P}}_{1} &  {\bar{P}}_{2} & {\bar{P}}_{3}\end{array}\right]\]
 			
-			\[{P}_{1} = {[{u}_{1s}]}_{e} = \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix} \;
-			{P}_{2} = {[{u}_{2s}]}_{e} = \begin{bmatrix}1 \\ 2 \\ 2\end{bmatrix} \;
-			{P}_{3} = {[{u}_{3s}]}_{e} = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix} 
-			\Rightarrow P = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 2 & 3\end{bmatrix}\]
+			\begin{equation}{\bar{P}}_{1} = {[{u}_{1s}]}_{e} = \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix} \;
+			{\bar{P}}_{2} = {[{u}_{2s}]}_{e} = \begin{bmatrix}1 \\ 2 \\ 2\end{bmatrix} \;
+			{\bar{P}}_{3} = {[{u}_{3s}]}_{e} = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix} 
+			\Rightarrow \bar{P} = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 2 & 3\end{bmatrix}\end{equation}
+			
+			As, $\bar{P} = {P}^{-1}$ $\Rightarrow P = {\bar{P}}^{-1}, $
+			\begin{equation}
+				\Rightarrow P = \begin{bmatrix}-2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 1\end{bmatrix}
+			\end{equation}
 		
 		\item[Question: 9.] \setcounter{equation}{0} 
 		\item[Answer:]
@@ -407,90 +413,99 @@
 			So, we get the new basis by applying trogonometric relations as, 
 			\begin{equation} {[x]}_{R} = 
 				\left(
-					{X}_{R} = \begin{bmatrix}\cos\theta \\ 0\end{bmatrix},
-					{Y}_{R} = \begin{bmatrix}0 \\ \sin\theta\end{bmatrix}
+					{X}_{R} = \begin{bmatrix}\cos\theta \\ \sin\theta\end{bmatrix},
+					{Y}_{R} = \begin{bmatrix}-\sin\theta \\ \cos\theta\end{bmatrix}
 				\right)
 			\end{equation}
 			
 			Now, we need to find a matrix $P$ such that,  ${[x]}_{R} = P{[x]}_{W}$
 			
-			We shall work column by column, 
+			But as it is easier to find $\bar{P}$ first, we shall do it by working column by column, 
 			\renewcommand{\arraystretch}{1.5}
-			\begin{equation}P = \left[\begin{array}{c:c} {P}_{1} &  {P}_{2}\end{array}\right]\end{equation}
+			\begin{equation}\bar{P} = \left[\begin{array}{c:c} {\bar{P}}_{1} &  {\bar{P}}_{2}\end{array}\right]\end{equation}
 			
-			\begin{equation}{P}_{1} = {[{X}_{R}]}_{W} = \begin{bmatrix}\cos\theta \\ 0\end{bmatrix} \;
-			{P}_{2} = {[{Y}_{R}]}_{W} = \begin{bmatrix}0 \\ \sin\theta\end{bmatrix}
-			\Rightarrow P = \begin{bmatrix} \cos\theta & 0 \\ 0 & \sin\theta\end{bmatrix}\end{equation}
+			\begin{equation}{\bar{P}}_{1} = {[{X}_{R}]}_{W} = \begin{bmatrix}\cos\theta \\ \sin\theta\end{bmatrix} \;
+			{\bar{P}}_{2} = {[{Y}_{R}]}_{W} = \begin{bmatrix}-\sin\theta \\ \cos\theta\end{bmatrix}
+			\Rightarrow \bar{P} = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{bmatrix}\end{equation}
+			
+			As, $\bar{P} = {P}^{-1}$ $\Rightarrow P = {\bar{P}}^{-1}, $ 
+			\begin{equation}
+				\Rightarrow P = \frac{1}{{\cos}^{2}\theta + {\sin}^{2}\theta}\begin{bmatrix}\cos\theta & \sin\theta \\-\sin\theta & \cos\theta\end{bmatrix}
+			\end{equation}
+			
+			\begin{equation}
+				=\begin{bmatrix}\cos\theta & \sin\theta \\-\sin\theta & \cos\theta\end{bmatrix}
+			\end{equation}
 			
 		
-		\item[Question: 10. (a) ] \setcounter{equation}{0} %Nagy, Page 136, Prob. 4.4.4 (a)
-		\item[Answer:] Given,
-			$\mathcal{M} = ({M}_{1}, {M}_{2}, {M}_{3}, {M}_{4}) \subset {\mathbb{R}}^{2,2}$ with, \\ \\
-			${M}_{1} = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}$,	${M}_{2} = \begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix}$,	${M}_{3} = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$,	${M}_{4} = \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}$ 
-			
-			Firstly, we shall check for the \textit{Linear Independence} of $\mathcal{M}$
-			\begin{equation}
-				\Rightarrow {\alpha}_{1}\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} + {\alpha}_{2}\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix} + {\alpha}_{3}\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} + {\alpha}_{4}\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} = 0
-			\end{equation}
-			\begin{align}
-				\Rightarrow {\alpha}_{3} + {\alpha}_{4} = 0 \\
-				\Rightarrow {\alpha}_{1} - {\alpha}_{2} = 0 \\
-				\Rightarrow {\alpha}_{1} + {\alpha}_{2} = 0 \\
-				\Rightarrow {\alpha}_{3} - {\alpha}_{4} = 0
-			\end{align}
-			Upon solving ${Eq}^{n} (2), (3), (4), (5), $ we get, ${\alpha}_{1} = {\alpha}_{2} = {\alpha}_{3} = {\alpha}_{4} = 0.$
-			
-			$\Rightarrow \; \mathcal{M}$ is \textit{Linearly Independent}. \\ \\
-			
-			Secondly, $span\{\mathcal{M}\} = {\mathbb{R}}^{2,2}$ 
-			
-			Consider some arbitraty matrix, 
-			\begin{equation}R = \begin{bmatrix}{r}_{11} & {r}_{12} \\ {r}_{21} & {r}_{22} \end{bmatrix} \subset {\mathbb{R}}^{2,2}\end{equation}
-			
-			Now, let us try to express $R$ as a linear combination of $\mathcal{M}$, 
-			\begin{equation}
-				R = {\beta}_{1}{M}_{1} + {\beta}_{2}{M}_{2} + {\beta}_{3}{M}_{3} + {\beta}_{4}{M}_{4}
-			\end{equation}
-			\begin{equation}
-				\begin{bmatrix}{r}_{11} & {r}_{12} \\ {r}_{21} & {r}_{22} \end{bmatrix} = {\beta}_{1}\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} + {\beta}_{2}\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix} + {\beta}_{3}\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} + {\beta}_{4}\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}
-			\end{equation}
-			\begin{align}
-				\Rightarrow {r}_{11} = {\beta}_{3} + {\beta}_{4} \\
-				\Rightarrow {r}_{12} = {\beta}_{1} - {\beta}_{2} \\
-				\Rightarrow {r}_{21} = {\beta}_{1} + {\beta}_{2} \\
-				\Rightarrow {r}_{22} = {\beta}_{3} - {\beta}_{4}
-			\end{align}
-			Where, ${r}_{11}, {r}_{12}, {r}_{21}, {r}_{22}, {\beta}_{1}, {\beta}_{2}, {\beta}_{3}\; and\; {\beta}_{4} \in \mathbb{R} $ \\
-			Since we have expressed an arbitrary matrix $R$ as a linear combination of the matrices in $\mathcal{M}$ with coefficients that can be any real values, this means that $\text{span}\{\mathcal{M}\}$ can generate any matrix in $\mathbb{R}^{2,2}$. \\
-			$\Rightarrow\text{span}\{\mathcal{M}\} = \mathbb{R}^{2,2}$
-			
-			Having proved that $\mathcal{M}$ is both \textit{Linearly Independent} and $\text{span}\{\mathcal{M}\} = \mathbb{R}^{2,2}$ \\
-			$\therefore$ the set $\mathcal{M}$ is a basis of ${\mathbb{R}}^{2,2}$. \textbf{Q.E.D}
-						
-		\item[Question: 10. (b) ] \setcounter{equation}{0} Nagy, Page 136, Prob. 4.4.4 (b)
-		\item[Answer:] Given,
-			\begin{equation}
-				A = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
-			\end{equation}
-			And $\mathcal{M} = ({M}_{1}, {M}_{2}, {M}_{3}, {M}_{4}) \subset  \mathbb{R}^{2,2}$ with, \\ \\
-			${M}_{1} = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}$,	${M}_{2} = \begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix}$,	${M}_{3} = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$,	${M}_{4} = \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}$ 
-			To find the components of $A$ in the ordered basis $\mathcal{M}$, we must put it in the form of a linear combination, 
-			\begin{equation}
-				{\alpha}_{1}{M}_{1} + {\alpha}_{2}{M}_{2} + {\alpha}_{3}{M}_{3} + {\alpha}_{4}{M}_{4} = A
-			\end{equation}
-			\begin{equation}
-				{\alpha}_{1}\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} + {\alpha}_{2}\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix} + {\alpha}_{3}\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} + {\alpha}_{4} \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
-			\end{equation}
-			\begin{align}
-				\Rightarrow {\alpha}_{3} + {\alpha}_{4} = 1 \\
-				\Rightarrow {\alpha}_{1} - {\alpha}_{2} = 2\\
-				\Rightarrow {\alpha}_{1} + {\alpha}_{2} = 3 \\
-				\Rightarrow {\alpha}_{3} - {\alpha}_{4} = 4
-			\end{align}
-			Upon solving ${Eq}^{n} (4), (5), (6), (7), $ we get, ${\alpha}_{1} = \frac{5}{2}$ ; ${\alpha}_{2} = \frac{1}{2}$ ; ${\alpha}_{3} = \frac{5}{2}$ ; ${\alpha}_{4} = -\frac{3}{2}$
-			Therefore, 
-			\begin{equation} \notag
-				\begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}= \frac{5}{2}{M}_{1} + \frac{1}{2}{M}_{2} + \frac{5}{2}{M}_{3} - \frac{3}{2}{M}_{4} \iff {[A]}_{\mathcal{M}} = \begin{bmatrix}\frac{5}{2} & \frac{1}{2} \\ \frac{5}{2} & -\frac{3}{2}\end{bmatrix} \in {\mathbb{R}}^{2,2}
-			\end{equation}
+%		\item[Question: 10. (a) ] \setcounter{equation}{0} %Nagy, Page 136, Prob. 4.4.4 (a)
+%		\item[Answer:] Given,
+%			$\mathcal{M} = ({M}_{1}, {M}_{2}, {M}_{3}, {M}_{4}) \subset {\mathbb{R}}^{2,2}$ with, \\ \\
+%			${M}_{1} = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}$,	${M}_{2} = \begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix}$,	${M}_{3} = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$,	${M}_{4} = \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}$ 
+%			
+%			Firstly, we shall check for the \textit{Linear Independence} of $\mathcal{M}$
+%			\begin{equation}
+%				\Rightarrow {\alpha}_{1}\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} + {\alpha}_{2}\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix} + {\alpha}_{3}\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} + {\alpha}_{4}\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} = 0
+%			\end{equation}
+%			\begin{align}
+%				\Rightarrow {\alpha}_{3} + {\alpha}_{4} = 0 \\
+%				\Rightarrow {\alpha}_{1} - {\alpha}_{2} = 0 \\
+%				\Rightarrow {\alpha}_{1} + {\alpha}_{2} = 0 \\
+%				\Rightarrow {\alpha}_{3} - {\alpha}_{4} = 0
+%			\end{align}
+%			Upon solving ${Eq}^{n} (2), (3), (4), (5), $ we get, ${\alpha}_{1} = {\alpha}_{2} = {\alpha}_{3} = {\alpha}_{4} = 0.$
+%			
+%			$\Rightarrow \; \mathcal{M}$ is \textit{Linearly Independent}. \\ \\
+%			
+%			Secondly, $span\{\mathcal{M}\} = {\mathbb{R}}^{2,2}$ 
+%			
+%			Consider some arbitraty matrix, 
+%			\begin{equation}R = \begin{bmatrix}{r}_{11} & {r}_{12} \\ {r}_{21} & {r}_{22} \end{bmatrix} \subset {\mathbb{R}}^{2,2}\end{equation}
+%			
+%			Now, let us try to express $R$ as a linear combination of $\mathcal{M}$, 
+%			\begin{equation}
+%				R = {\beta}_{1}{M}_{1} + {\beta}_{2}{M}_{2} + {\beta}_{3}{M}_{3} + {\beta}_{4}{M}_{4}
+%			\end{equation}
+%			\begin{equation}
+%				\begin{bmatrix}{r}_{11} & {r}_{12} \\ {r}_{21} & {r}_{22} \end{bmatrix} = {\beta}_{1}\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} + {\beta}_{2}\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix} + {\beta}_{3}\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} + {\beta}_{4}\begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}
+%			\end{equation}
+%			\begin{align}
+%				\Rightarrow {r}_{11} = {\beta}_{3} + {\beta}_{4} \\
+%				\Rightarrow {r}_{12} = {\beta}_{1} - {\beta}_{2} \\
+%				\Rightarrow {r}_{21} = {\beta}_{1} + {\beta}_{2} \\
+%				\Rightarrow {r}_{22} = {\beta}_{3} - {\beta}_{4}
+%			\end{align}
+%			Where, ${r}_{11}, {r}_{12}, {r}_{21}, {r}_{22}, {\beta}_{1}, {\beta}_{2}, {\beta}_{3}\; and\; {\beta}_{4} \in \mathbb{R} $ \\
+%			Since we have expressed an arbitrary matrix $R$ as a linear combination of the matrices in $\mathcal{M}$ with coefficients that can be any real values, this means that $\text{span}\{\mathcal{M}\}$ can generate any matrix in $\mathbb{R}^{2,2}$. \\
+%			$\Rightarrow\text{span}\{\mathcal{M}\} = \mathbb{R}^{2,2}$
+%			
+%			Having proved that $\mathcal{M}$ is both \textit{Linearly Independent} and $\text{span}\{\mathcal{M}\} = \mathbb{R}^{2,2}$ \\
+%			$\therefore$ the set $\mathcal{M}$ is a basis of ${\mathbb{R}}^{2,2}$. \textbf{Q.E.D}
+%						
+%		\item[Question: 10. (b) ] \setcounter{equation}{0} %Nagy, Page 136, Prob. 4.4.4 (b)
+%		\item[Answer:] Given,
+%			\begin{equation}
+%				A = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
+%			\end{equation}
+%			And $\mathcal{M} = ({M}_{1}, {M}_{2}, {M}_{3}, {M}_{4}) \subset  \mathbb{R}^{2,2}$ with, \\ \\
+%			${M}_{1} = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}$,	${M}_{2} = \begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix}$,	${M}_{3} = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$,	${M}_{4} = \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}$ 
+%			To find the components of $A$ in the ordered basis $\mathcal{M}$, we must put it in the form of a linear combination, 
+%			\begin{equation}
+%				{\alpha}_{1}{M}_{1} + {\alpha}_{2}{M}_{2} + {\alpha}_{3}{M}_{3} + {\alpha}_{4}{M}_{4} = A
+%			\end{equation}
+%			\begin{equation}
+%				{\alpha}_{1}\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} + {\alpha}_{2}\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix} + {\alpha}_{3}\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} + {\alpha}_{4} \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix} = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
+%			\end{equation}
+%			\begin{align}
+%				\Rightarrow {\alpha}_{3} + {\alpha}_{4} = 1 \\
+%				\Rightarrow {\alpha}_{1} - {\alpha}_{2} = 2\\
+%				\Rightarrow {\alpha}_{1} + {\alpha}_{2} = 3 \\
+%				\Rightarrow {\alpha}_{3} - {\alpha}_{4} = 4
+%			\end{align}
+%			Upon solving ${Eq}^{n} (4), (5), (6), (7), $ we get, ${\alpha}_{1} = \frac{5}{2}$ ; ${\alpha}_{2} = \frac{1}{2}$ ; ${\alpha}_{3} = \frac{5}{2}$ ; ${\alpha}_{4} = -\frac{3}{2}$
+%			Therefore, 
+%			\begin{equation} \notag
+%				\begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}= \frac{5}{2}{M}_{1} + \frac{1}{2}{M}_{2} + \frac{5}{2}{M}_{3} - \frac{3}{2}{M}_{4} \iff {[A]}_{\mathcal{M}} = \begin{bmatrix}\frac{5}{2} & \frac{1}{2} \\ \frac{5}{2} & -\frac{3}{2}\end{bmatrix} \in {\mathbb{R}}^{2,2}
+%			\end{equation}
 	\end{qalist}
 \end{document}
