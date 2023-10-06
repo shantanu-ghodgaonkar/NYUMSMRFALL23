@@ -21,17 +21,17 @@
 \begin{document}
 	
 	\begin{titlepage}
-%	    \centering
-%	    \vspace{2cm}
-%	    \Huge\textbf{Foundations of Robotics \\ ROB-GY 6003 \\ Homework 2 Answers}
-%	    \vspace{1cm}
-%	    \\ \Large \today
-%	    \vfill 
-%	    \Large \myName
+	    \centering
+	    \vspace{2cm}
+	    \Huge\textbf{Foundations of Robotics \\ ROB-GY 6003 \\ Homework 2 Answers}
+	    \vspace{1cm}
+	    \\ \Large \today
+	    \vfill 
+	    \Large \myName
 	\end{titlepage}
 	
 	\begin{qalist}			
-		\item[Question: 3.1] \setcounter{equation}{0} 15
+		\item[Question: 3.1] \setcounter{equation}{0} %15
 		\item[Answer:] Consider below Figure~\ref{fig:3Rarm} \\
 			\begin{minipage}{\linewidth}
 				\vspace{0.5cm}
@@ -42,7 +42,7 @@
 				\vspace{0.5cm}
 			\end{minipage}
 			Frames have been attached to each of the \textit{joints} and the \textit{end effector}. 
-			We shall now construct the DH Parameter table for this - \textbf{CHECK THIS CONCEPT AGAIN} \\
+			We shall now construct the DH Parameter table for this - \\
 			\begin{minipage}{\linewidth}
 				\vspace{0.5cm}
 				\centering
@@ -50,17 +50,17 @@
 					\hline
 					${joint}_{i}$ & ${\theta}_{i}$ & ${d}_{i}$ & ${a}_{i}$ & ${\alpha}_{i}$\\
 					\hline \hline
-					${joint}_{2}$ Revolute & ${\theta}_{1}$ & $0$ & ${L}_{1}$ & $0 \degree$\\
+					${joint}_{1}$ Revolute & ${\theta}_{1} + {q}_{1}$ & $0$ & ${L}_{1}$ & $0 $\\
 					\hline
-					${joint}_{3}$ Revolute & ${\theta}_{2}$ & $0$ & ${L}_{2}$ & $0\degree$\\
+					${joint}_{2}$ Revolute & ${\theta}_{2} + {q}_{2}$ & $0$ & ${L}_{2}$ & $0$\\
 					\hline
-					End Effector & ${\theta}_{3}$ & $0$ & ${L}_{3}$ & $0 \degree$\\
+					${joint}_{3}$ Revolute& ${\theta}_{3} + {q}_{3}$ & $0$ & ${L}_{3}$ & $0 $\\
 					\hline
 				\end{tabular}
 				\vspace{0.5cm}
 			\end{minipage}	
 			
-		\item[Question: 3.4] \setcounter{equation}{0} \textbf{RECHECK THIS ANSWER and make Z1 and Z2 opposite} %22
+		\item[Question: 3.4] \setcounter{equation}{0} %22
 		\item[Answer:] Consider below Figure~\ref{fig:q3_4} \\
 			\begin{minipage}{\linewidth}
 				\vspace{0.5cm}
@@ -79,11 +79,11 @@
 					\hline
 					${joint}_{i}$ & ${\theta}_{i}$ & ${d}_{i}$ & ${a}_{i}$ & ${\alpha}_{i}$\\
 					\hline \hline
-					${joint}_{2}$ Revolute & ${\theta}_{1}$ & $0$ & ${L}_{1}$ & $0 \degree$\\
+					${joint}_{1}$ Revolute & $0 + {q}_{1}$ & ${L}_{1} + {L}_{2}$ & $0$ & $0 $\\
 					\hline
-					${joint}_{3}$ Revolute & ${\theta}_{2}$ & $0$ & ${L}_{2}$ & $0\degree$\\
+					${joint}_{2}$ Revolute & $0 + {q}_{2}$ & $0$ & ${L}_{3}$ & $\frac{\pi}{2}$\\
 					\hline
-					End Effector & ${\theta}_{3}$ & $0$ & ${L}_{3}$ & $0 \degree$\\
+					${joint}_{3}$ Revolute & $0 + {q}_{3}$ & $0$ & ${L}_{4}$ & $0 $\\
 					\hline
 				\end{tabular}
 				\vspace{0.5cm}
@@ -98,32 +98,23 @@
 					0 & 0 & 0 & 1
 				\end{bmatrix}
 			\end{equation}
-			
-%			\begin{equation}
-%				\Rightarrow{}^{S}_{1}T = 
-%				\begin{bmatrix}
-%					\cos({\theta}_{1} + {q}_{1}) & -\sin({\theta}_{1} + {q}_{1}) & 0 & 0 \\
-%					\sin({\theta}_{1} + {q}_{1}) & \cos({\theta}_{1} + {q}_{1}) & 0 & 0 \\
-%					0 & 0 & 1 & 0 \\
-%					0 & 0 & 0 & 1
-%				\end{bmatrix}
-%			\end{equation}
-			
+	
 			\begin{equation}
 				\Rightarrow {}^{S}_{1}T = 
 				\begin{bmatrix}
-					\cos({\theta}_{2} + {q}_{2}) & 0 & \sin({\theta}_{2} + {q}_{2}) & ({L}_{1} + {L}_{2})\cos({\theta}_{2} + {q}_{2}) \\
-					\sin({\theta}_{2} + {q}_{2}) & 0 & -\cos({\theta}_{2} + {q}_{2}) & ({L}_{1} + {L}_{2})\sin({\theta}_{2} + {q}_{2}) \\
-					0 & 1 & 0 & 0 \\
+					\cos{q}_{1} & -\sin{q}_{1} & 0 & 0 \\
+					\sin{q}_{1} & \cos{q}_{1} & 0 & 0 \\
+					0 & 0 & 1 & ({L}_{1} + {L}_{2}) \\
 					0 & 0 & 0 & 1
 				\end{bmatrix}
 			\end{equation}
+			
 			\begin{equation}
 				\Rightarrow {}^{1}_{2}T = 
 				\begin{bmatrix}
-					\cos({\theta}_{3} + {q}_{3}) & -\sin({\theta}_{3} + {q}_{3}) & 0 & {L}_{3}\cos({\theta}_{3} + {q}_{3}) \\
-					\sin({\theta}_{3} + {q}_{3}) & \cos({\theta}_{3} + {q}_{3}) & 0 & {L}_{3}\sin({\theta}_{3} + {q}_{3}) \\
-					0 & 0 & 1 & 0 \\
+					\cos{q}_{2} & 0 & \sin{q}_{2} & {L}_{3}\cos{q}_{2} \\
+					\sin{q}_{2} & 0 & -\cos{q}_{2} & {L}_{3}\sin{q}_{2} \\
+					0 & 1 & 0 & 0 \\
 					0 & 0 & 0 & 1
 				\end{bmatrix}
 			\end{equation}
@@ -131,8 +122,8 @@
 			\begin{equation}
 				\Rightarrow {}^{2}_{T}T = 
 				\begin{bmatrix}
-					\cos({\theta}_{4} + {q}_{4}) & -\sin({\theta}_{4} + {q}_{4}) & 0 & {L}_{4}\cos({\theta}_{4} + {q}_{4}) \\
-					\sin({\theta}_{4} + {q}_{4}) & \cos({\theta}_{4} + {q}_{4}) & 0 & {L}_{4}\sin({\theta}_{4} + {q}_{4}) \\
+					\cos{q}_{3} & -\sin{q}_{3} & 0 & {L}_{4}\cos{q}_{3} \\
+					\sin{q}_{3} & \cos{q}_{3} & 0 & {L}_{4}\sin{q}_{3} \\
 					0 & 0 & 1 & 0 \\
 					0 & 0 & 0 & 1
 				\end{bmatrix}
@@ -164,7 +155,7 @@
 			\[\Rightarrow {}^{W}_{T}T = {}^{B}_{W}{T}^{-1} \cdot {}^{B}_{S}T \cdot {}^{S}_{G}T\]
 		
 		\item[Question: 3.12] \setcounter{equation}{0} %08
-		\item[Answer:] No. An arbitrary rigid-body transformation requires six parameters. Only in the case that has been described here can the rigid-body transformation be expressed with four parameters.
+		\item[Answer:] No. An arbitrary rigid-body transformation requires six parameters. Only in the case that has been described here (according to the D-H Convention) can the rigid-body transformation be expressed with four parameters.
 		
 		\item[Question: 3.16] \setcounter{equation}{0} %15
 		\item[Answer:] The frames are attached as per DH convention given by Spong. See below Figure~\ref{fig:q3_16} -\\
@@ -183,15 +174,16 @@
 					\hline
 					${joint}_{i}$ & ${\theta}_{i}$ & ${d}_{i}$ & ${a}_{i}$ & ${\alpha}_{i}$\\
 					\hline
-					${joint}_{1}$ Revolute & ${\theta}_{1} + {q}_{1}$ & ${d}_{1} = 0$ & ${a}_{1}$ & ${\alpha}_{1} = 0$\\
+					${joint}_{1}$ Revolute & $0 + {q}_{1}$ & $0$ & ${L}_{1}$ & $\frac{\pi}{2}$\\
 					\hline
-					${joint}_{2}$ Prismatic & ${\theta}_{2} = 0$ & ${d}_{2} + {q}_{2}$ & ${a}_{2}$ & ${\alpha}_{2} = 90\degree$\\
+					${joint}_{2}$ Prismatic & $0$ & ${d}_{2} + {q}_{2}$ & $0$ & $-\frac{\pi}{2}$\\
 					\hline
-					${joint}_{3}$ Revolute & ${\theta}_{3} + {q}_{3}$ & ${d}_{3} = 0$ & ${a}_{3}$ & ${\alpha}_{3} = -90 \degree$\\
+					${joint}_{3}$ Revolute & ${\theta}_{3} + {q}_{3}$ & $0$ & ${L}_{3}$ & $0 $\\
 					\hline
 				\end{tabular}
 			\end{minipage}		
 			
+		\newpage	
 		\item[Question: 3.17] \setcounter{equation}{0} %15
 		\item[Answer:] The frames are attached as per DH convention given by Spong. See below Figure~\ref{fig:q3_17} -\\
 			\begin{minipage}{\linewidth}
@@ -209,11 +201,11 @@
 					\hline
 					${joint}_{i}$ & ${\theta}_{i}$ & ${d}_{i}$ & ${a}_{i}$ & ${\alpha}_{i}$\\
 					\hline
-					${joint}_{1}$ Revolute & ${\theta}_{1} + {q}_{1}$ & ${d}_{1} = 0$ & ${a}_{1} = {L}_{1}$ & ${\alpha}_{1} = 0$\\
+					${joint}_{1}$ Revolute & $0 + {q}_{1}$ & ${L}_{1}$ & $0$ & $-\frac{\pi}{2}$\\
 					\hline
-					${joint}_{2}$ Revolute & ${\theta}_{2} + {q}_{2}$ & ${d}_{2} + {q}_{2}$ & ${a}_{2} = {L}_{2}$ & ${\alpha}_{2} = 90\degree$\\
+					${joint}_{2}$ Revolute & $-\frac{\pi}{2} + {q}_{2}$ & $0$ & ${L}_{2}$ & $-\frac{\pi}{2}$\\
 					\hline
-					${joint}_{3}$ Prismatic & ${\theta}_{3}$ & ${d}_{3} + {q}_{3}$ & ${a}_{3}$ & ${\alpha}_{3} = -90\degree$\\
+					${joint}_{3}$ Prismatic & $0$ & $0 + {q}_{3}$ & $0$ & $0$\\
 					\hline
 				\end{tabular}
 			\end{minipage}	
