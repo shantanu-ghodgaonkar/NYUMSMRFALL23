@@ -31,356 +31,356 @@
 %	\end{titlepage}
 	
 	\begin{qalist}			
-%		\item[Question: 1.(a)] \setcounter{equation}{0} Nagy, Page 136, Prob. 4.4.3
-%		\item[Answer:] Given, $V = {\mathbb{P}}_{2}$ with the ordered basis $\mathcal{S} = \left( {p}_{0} = 1,\;{p}_{1} = x,\;{p}_{2} = {x}^{2}\right)$ 
-%		
-%		And the given polynomial is $r(x) = 2 + 3x - {x}^{2}$.
-%		
-%		
-%		$\therefore$ the components of $r(x)$ in basis $\mathcal{S}$ is 
-%		
-%		\begin{equation}
-%			{\text{r}}_{\mathcal{S}} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}
-%		\end{equation}
-%		
-%		\item[Question: 1.(b)] \setcounter{equation}{0} %Nagy, Page 136, Prob. 4.4.3
-%		\item[Answer:] Given, $V = {\mathbb{P}}_{2}$ with the ordered basis $\mathcal{Q} = \left( {q}_{0} = 1,\;{q}_{1} = 1 - x,\;{q}_{2} = x + {x}^{2}\right)$. 
-%		
-%		From the definition of the basis $\mathcal{Q}$, we can rewrite it in terms of basis $\mathcal{S}$ as, 
-%		
-%		${q}_{0_{\mathcal{S}}} = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}$, ${q}_{1_{\mathcal{S}}} = \begin{bmatrix}1 \\ -1 \\ 0\end{bmatrix}$ and ${q}_{2_{\mathcal{S}}} = \begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}$ $\Rightarrow {Q}_{\mathcal{S}} = \begin{bmatrix}1 & 1 & 0 \\ 0 & -1 & 1 \\ 0 & 0 & 1\end{bmatrix}$
-%		
-%		And the given polynomial is $r(x) = 2 + 3x - {x}^{2}$.
-%		\begin{equation}
-%			\Rightarrow {\text{r}}_{\mathcal{S}} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}
-%		\end{equation}
-%		
-%		Now, we need to find numbers ${\tilde{r}}_{0}$, ${\tilde{r}}_{1}$ and ${\tilde{r}}_{2}$ such that,
-%		\begin{equation}{\text{r}}_{\mathcal{S}} = {\tilde{r}}_{0}{\text{q}}_{{0}_{\mathcal{S}}} + {\tilde{r}}_{1}{\text{q}}_{{1}_{\mathcal{S}}} + {\tilde{r}}_{2}{\text{q}}_{{2}_{\mathcal{S}}}\end{equation}
-%		
-%		\begin{equation}
-%			\Rightarrow \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix} = 
-%			{\tilde{r}}_{0}\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + 
-%			{\tilde{r}}_{1}\begin{bmatrix}1 \\ -1 \\ 0\end{bmatrix} + 
-%			{\tilde{r}}_{2}\begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}
-%		\end{equation}
-%		
-%		${Eq}^{n}$ can be rewritten as
-%		
-%		\begin{equation}
-%			\begin{bmatrix}1 & 1 & 0 \\ 0 & -1 & 1 \\ 0 & 0 & 1\end{bmatrix} \begin{bmatrix}{\tilde{r}}_{0} \\ {\tilde{r}}_{1} \\ {\tilde{r}}_{2}\end{bmatrix} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}
-%		\end{equation}
-%		
-%		Applying the Gauss method,
-%		\begin{equation}
-%			\left[\begin{array}{ccc|c}1 & 1 & 0 & 2\\ 0 & -1 & 1 & 3\\ 0 & 0 & 1 & -1\end{array}\right]
-%		\end{equation}
-%		
-%		${R}_{2} \rightarrow (-1){R}_{2}$
-%		\begin{equation}
-%			\left[\begin{array}{ccc|c}1 & 1 & 0 & 2\\ 0 & 1 & -1 & -3\\ 0 & 0 & 1 & -1\end{array}\right]
-%		\end{equation}
-%		
-%		${R}_{1} \rightarrow {R}_{1} + (-1){R}_{2}$
-%		\begin{equation}
-%			\left[\begin{array}{ccc|c}1 & 0 & 1 & 5\\ 0 & 1 & -1 & -3\\ 0 & 0 & 1 & -1\end{array}\right]
-%		\end{equation}
-%		
-%		${R}_{2} \rightarrow {R}_{2} + {R}_{3}$
-%		\begin{equation}
-%			\left[\begin{array}{ccc|c}1 & 0 & 1 & 5\\ 0 & 1 & 0 & -4\\ 0 & 0 & 1 & -1\end{array}\right]
-%		\end{equation}
-%
-%		${R}_{1} \rightarrow {R}_{1} + (-1){R}_{3}$
-%		\begin{equation}
-%			\left[\begin{array}{ccc|c}1 & 0 & 0 & 6\\ 0 & 1 & 0 & -4\\ 0 & 0 & 1 & -1\end{array}\right]
-%		\end{equation}		
-%		
-%		Hence, the solution is, 
-%		\begin{equation}
-%			{\text{r}}_{q} = \begin{bmatrix}6 \\ -4 \\ -1\end{bmatrix}
-%		\end{equation}		
-%
-%		\item[Question: 2.] \setcounter{equation}{0}
-%		\item[Answer:] Given the matrix, 
-%			\begin{equation}
-%				{A}_{3} = \begin{bmatrix} 1 & 4 & 10 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}
-%			\end{equation}
-%			By definition, we know that, $\exists v \neq 0 \text{ s.t. } Av = \lambda v \; \Rightarrow (\lambda I - A) v = 0 \; \Leftrightarrow det(\lambda I - A) = 0$ 
-%			\begin{equation}
-%				\Rightarrow \lambda I - A = \begin{bmatrix}\lambda-1 & -4 & -10 \\ 0 & \lambda - 2 & 0 \\ 0 & 0 & \lambda -3\end{bmatrix}
-%			\end{equation}
-%			
-%			\begin{equation}
-%				\Rightarrow det(\lambda I - A) = (\lambda - 1)\cdot(\lambda - 2)\cdot(\lambda - 3) = 0
-%			\end{equation}
-%						
-%			\begin{equation}
-%				\therefore {\lambda}_{1} = 1, {\lambda}_{2} = 2 , {\lambda}_{3} = 3
-%			\end{equation}
-%			
-%			Now, we shall apply the known relation $A{v}^{i} = {\lambda}_{i}{v}^{i}$ $\Rightarrow (A - {\lambda}_{i}I){v}^{i} = 0$ 
-%			\begin{equation} \label{eq:q2eigVecEqn}
-%				\begin{bmatrix}1 - {\lambda}_{i} & 4 & 10 \\ 0 & 2 - {\lambda}_{i} & 0 \\ 0 & 0 & 3 - {\lambda}_{i}\end{bmatrix} 
-%				\begin{bmatrix}{v}^{i}_{1} \\ {v}^{i}_{2} \\ {v}^{i}_{3}\end{bmatrix} = 
-%				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
-%			\end{equation}
-%			
-%			From ${Eq}^{n}~\ref{eq:q2eigVecEqn}$, substituting ${\lambda}_{1} = 1$
-%			\begin{equation}
-%				\begin{bmatrix}0 & 4 & 10 \\ 0 & 1 & 0 \\ 0 & 0 & 2\end{bmatrix} 
-%				\begin{bmatrix}{v}^{1}_{1} \\ {v}^{1}_{2} \\ {v}^{1}_{3}\end{bmatrix} = 
-%				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
-%				\Rightarrow
-%				\begin{array}{c}
-%					4{v}^{1}_{2} + 10{v}^{1}_{3} = 0 \\
-%					{v}^{1}_{2} = 0 \\
-%					2{v}^{1}_{3} = 0
-%				\end{array}
-%				\Rightarrow \begin{array}{c}{v}^{1}_{1} = \text{any value} \\ {v}^{1}_{2} = 0 \\ {v}^{1}_{3} = 0\end{array} \Rightarrow {v}^{1}= \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}
-%			\end{equation}
-%			
-%			From ${Eq}^{n}~\ref{eq:q2eigVecEqn}$, substituting ${\lambda}_{2} = 2$
-%			\begin{equation}
-%				\begin{bmatrix}-1 & 4 & 10 \\ 0 & 0 & 0 \\ 0 & 0 & 1\end{bmatrix} 
-%				\begin{bmatrix}{v}^{2}_{1} \\ {v}^{2}_{2} \\ {v}^{2}_{3}\end{bmatrix} = 
-%				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
-%				\Rightarrow
-%				\begin{array}{c}
-%					-{v}^{2}_{1} + 4{v}^{2}_{2} + 10{v}^{2}_{3} = 0 \\
-%					0 = 0 \\
-%					{v}^{2}_{3} = 0
-%				\end{array}
-%				\Rightarrow \begin{array}{c}{v}^{2}_{1} = 4{v}^{2}_{2} \\ {v}^{2}_{2}=\text{any value}\\ {v}^{2}_{3}=0\end{array} \Rightarrow {v}^{2} = \begin{bmatrix}4 \\ 1 \\ 0\end{bmatrix}
-%			\end{equation}
-%			
-%			From ${Eq}^{n}~\ref{eq:q2eigVecEqn}$, substituting ${\lambda}_{3} = 3$
-%			\begin{equation}
-%				\begin{bmatrix}-2 & 4 & 10 \\ 0 & -1 & 0 \\ 0 & 0 & 0\end{bmatrix} 
-%				\begin{bmatrix}{v}^{3}_{1} \\ {v}^{3}_{2} \\ {v}^{3}_{3}\end{bmatrix} = 
-%				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
-%				\Rightarrow
-%				\begin{array}{c}
-%					-2{v}^{3}_{1} + 4{v}^{3}_{2} + 10{v}^{3}_{3} = 0 \\
-%					-{v}^{3}_{2} = 0 \\
-%					0 = 0
-%				\end{array}
-%				\Rightarrow \begin{array}{c}{v}^{3}_{1} = 5{v}^{3}_{3} \\ {v}^{3}_{2}=0\\ {v}^{3}_{3}=\text{any value}\end{array} \Rightarrow {v}^{3} = \begin{bmatrix}5 \\ 0 \\ 1\end{bmatrix}
-%			\end{equation}
-%			
-%			Now we shall verify that ${v}^{1}$, ${v}^{2}$ and ${v}^{3}$ are \textit{Linearly Independant},
-%			\begin{equation}
-%				{\alpha}_{1}{v}^{1}+{\alpha}_{2}{v}^{2}+{\alpha}_{3}{v}^{3} = 0
-%			\end{equation}
-%			
-%			\begin{equation}
-%				{\alpha}_{1}\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}+
-%				{\alpha}_{2}\begin{bmatrix}4 \\ 1 \\ 0\end{bmatrix}+
-%				{\alpha}_{3}\begin{bmatrix}5 \\ 0 \\ 1\end{bmatrix}
-%				= 0
-%			\end{equation}
-%			
-%			\begin{align}
-%				{\alpha}_{1} + 4{\alpha}_{2} + 5{\alpha}_{3} = 0 \\
-%				{\alpha}_{2} = 0 \\
-%				{\alpha}_{3} = 0
-%			\end{align}
-%			
-%			Solving above system of equations gives us ${\alpha}_{1} = 0$, ${\alpha}_{2} = 0$ and ${\alpha}_{3} = 0$. \\
-%			$\therefore$ ${v}^{1}$, ${v}^{2}$ and ${v}^{3}$ are \textit{Linearly Independant}.
+		\item[Question: 1.(a)] \setcounter{equation}{0} Nagy, Page 136, Prob. 4.4.3
+		\item[Answer:] Given, $V = {\mathbb{P}}_{2}$ with the ordered basis $\mathcal{S} = \left( {p}_{0} = 1,\;{p}_{1} = x,\;{p}_{2} = {x}^{2}\right)$ 
 		
-%			
-%		\item[Question: 3.] \setcounter{equation}{0}
-%		\item[Answer:] Given the matrix, 
-%			\begin{equation}
-%				{A}_{4} = \begin{bmatrix} 3 & 1 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2\end{bmatrix}
-%			\end{equation}
-%			By definition, we know that, $\exists v \neq 0 \text{ s.t. } Av = \lambda v \; \Rightarrow (\lambda I - A) v = 0 \; \Leftrightarrow det(\lambda I - A) = 0$ 
-%			\begin{equation}
-%				\Rightarrow \lambda I - A = \begin{bmatrix}\lambda-3 & -1 & 0 \\ 0 & \lambda - 3 & 0 \\ 0 & 0 & \lambda -2\end{bmatrix}
-%			\end{equation}
-%			
-%			\begin{equation}
-%				\Rightarrow det(\lambda I - A) = (\lambda - 3)\cdot(\lambda - 3)\cdot(\lambda - 2) = 0
-%			\end{equation}
-%			
-%			\begin{equation}
-%				\therefore {\lambda}_{1} = 3, {\lambda}_{2} = 2
-%			\end{equation}			
-%			
-%			Now, we shall apply the known relation $A{v}^{i} = {\lambda}_{i}{v}^{i}$ $\Rightarrow (A - {\lambda}_{i}I){v}^{i} = 0$ 
-%			\begin{equation}\label{eq:q3eigVecEqn}
-%				\begin{bmatrix}3 - {\lambda}_{i} & 1 & 0 \\ 0 & 3 - {\lambda}_{i} & 0 \\ 0 & 0 & 2 - {\lambda}_{i}\end{bmatrix} 
-%				\begin{bmatrix}{v}^{i}_{1} \\ {v}^{i}_{2} \\ {v}^{i}_{3}\end{bmatrix} = 
-%				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
-%			\end{equation}
-%			
-%			From ${Eq}^{n}~\ref{eq:q3eigVecEqn}$, substituting ${\lambda}_{1} = 3$
-%			\begin{equation}
-%				\begin{bmatrix}0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1\end{bmatrix} 
-%				\begin{bmatrix}{v}^{1}_{1} \\ {v}^{1}_{2} \\ {v}^{1}_{3}\end{bmatrix} = 
-%				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
-%				\Rightarrow
-%				\begin{array}{c}
-%					{v}^{1}_{2} = 0 \\
-%					0 = 0 \\
-%					-{v}^{1}_{3} = 0
-%				\end{array}
-%				\Rightarrow \begin{array}{c}{v}^{1}_{1} = \text{any value} \\ {v}^{1}_{2} = 0 \\ {v}^{1}_{3} = 0\end{array} \Rightarrow {v}^{1}= \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}
-%			\end{equation}
-%			
-%			From ${Eq}^{n}~\ref{eq:q3eigVecEqn}$, substituting ${\lambda}_{2} = 2$
-%			\begin{equation}
-%				\begin{bmatrix}1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0\end{bmatrix} 
-%				\begin{bmatrix}{v}^{2}_{1} \\ {v}^{2}_{2} \\ {v}^{2}_{3}\end{bmatrix} = 
-%				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
-%				\Rightarrow
-%				\begin{array}{c}
-%					{v}^{2}_{1} = 0 \\
-%					{v}^{2}_{2}= 0 \\
-%					0 = 0
-%				\end{array}
-%				\Rightarrow \begin{array}{c}{v}^{2}_{1} = 0 \\ {v}^{2}_{2} = 0 \\ {v}^{2}_{3} = \text{any value}\end{array} \Rightarrow {v}^{2}= \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}
-%			\end{equation}
-%			
-%			Consider the set of eigenvectors $\mathcal{V} = \{{v}^{1}, {v}^{2}\}$. Firstly,
-%			\begin{equation} \label{q3EVLIStmnt}
-%				\text{We know that any set of eigenvectors of a given matrix are Linearly Independent. So, ${v}^{1}, {v}^{2}$ are \textit{L.I.}}
-%			\end{equation}
-%			
-%			Secondly, consider a linear combination $x$ such that, 
-%			\begin{equation}\label{q3SpanExp}
-%				\left\{x\in\mathbb{R}\;|\;\exists \; {\alpha}_{1}, {\alpha}_{2} \in \mathbb{R}, {v}^{1}, {v}^{2} \in \mathcal{V} \;;\;s.t.\;x = {\alpha}_{1}{v}^{1} + {\alpha}_{2}{v}^{2}\right\}
-%			\end{equation}
-%			By observing above ${Eq}^{n}$~\ref{q3SpanExp} we can see that it holds true for all cases.
-%			
-%			$\therefore$ based on the ${Eq}^{n}$ ~\ref{q3EVLIStmnt} and ~\ref{q3SpanExp} we can say that $\mathcal{V}$ forms a basis for ${\mathbb{R}}^{3}$.
-%
-%		\item[Question: 4.] \setcounter{equation}{0} 
-%		\item[Answer:] We are given two similar square matrices $A$ and $B$ such that,
-%			\begin{equation}\label{q4similarityRelation}B = {P}^{-1} A P\end{equation}
-%			
-%			Consider the characteristic relation of matrix $B$, 
-%			\begin{equation}\label{q4BcharReln1} det(\lambda I - B) \end{equation}
-%			
-%			Apply ${Eq}^{n}~\ref{q4similarityRelation}$ in ${Eq}^{n}~\ref{q4BcharReln}$, 
-%			\begin{equation}\label{q4BcharReln2}
-%				\Rightarrow  det(\lambda I - B) =  det(\lambda I - {P}^{-1} A P) 
-%			\end{equation}
-%			
-%			The identity matrix $I$ can also be written as ${P}^{-1} I P$. Substituting in ${Eq}^{n}$ ~\ref{q4BcharReln2}, 
-%			\begin{equation}\label{q4BcharReln3}
-%				\Rightarrow  det(\lambda I - B) =  det(\lambda {P}^{-1} I P - {P}^{-1} A P) 
-%			\end{equation}
-%			
-%			Now we shall take ${P}^{-1}$ and $P$ out common, 
-%			
-%			\begin{equation}\label{q4BcharReln4}
-%				\Rightarrow  det(\lambda I - B) =  det({P}^{-1} (\lambda I - A) P) 
-%			\end{equation}
-%			
-%			We know that for compatible square matrices $A$ and $B$, $det(AB) = det(A)det(B)$. So ${Eq}^{n}$ ~\ref{q4BcharReln4} becomes, 
-%			\begin{equation}\label{q4BcharReln5}
-%				\Rightarrow  det(\lambda I - B) =  det({P}^{-1}) det(\lambda I - A) det(P) 
-%			\end{equation}
-%			
-%			Cancelling out $ det({P}^{-1})$ by $det(P)$
-%			\begin{equation}\label{q4BcharReln6}
-%				\Rightarrow  det(\lambda I - B) =  det(\lambda I - A)
-%			\end{equation}
-%			
-%			When the relation in ${Eq}^{n}$ ~\ref{q4BcharReln6} is equated to zero, we prove that the two matrices have the same eigenvalues as well as the characteristic equations. I.E.,
-%			\begin{equation}\label{q4BcharReln6}
-%				\Rightarrow  det(\lambda I - B) =  det(\lambda I - A) = 0
-%			\end{equation}
-%			
-%			\textbf{Q.E.D.}
-%
-%		\item[Question: 5.] \setcounter{equation}{0} \textbf{$P$ is the eigenvector matrix}
-%		\item[Answer:] Given a matrix ${A}_{3}$ such that,
-%		
-%			\begin{equation} \label{q5Given}
-%				{A}_{3} = \begin{bmatrix}1 & 4 & 10 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}
-%			\end{equation}
-%			
-%			From Question: 2. We found the eigenvalues to be ${\lambda}_{1} = 1$, ${\lambda}_{2} = 2$, ${\lambda}_{3} = 3$. 
-%			
-%			Using these eigenvalues, we can create the diagonal martix, $\Lambda = diag({\lambda}_{1}, {\lambda}_{2}, {\lambda}_{3})$,
-%			\begin{equation}\label{q5DiagMat}
-%				\Lambda = \begin{bmatrix}1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}
-%			\end{equation}
-%			
-%%			To show similarity between $A$ and $\Lambda$, we need to find a matrix $P$ such that $\Lambda = P A {P}^{-1}$
-%			
-%			Consider a matrix $P = \begin{bmatrix}\end{bmatrix}$ such 
-%			
-%		\item[Question: 6.(a)] \setcounter{equation}{0} 
-%		\item[Answer:] Given, a vector space $(\mathcal{X}, \mathbb{R})$ where $\mathcal{X}$ is a set of 2 x 2 matrices with real coefficients.
-%		
-%		An operation is defined $L : \mathcal{X} \rightarrow \mathcal{X}$ by 
-%		\begin{equation}\label{q6aOptDefn}
-%			L(M) = \frac{1}{2} (M + {M}^{T})
-%		\end{equation}
-%		Where $M \in \mathcal{X}$ is a 2 x 2 real matrix
-%		
-%		The operator $L$ will be considered a \textit{Linear Operator} if, 
-%		\begin{equation}\label{q6aLinOpStmt}
-%			\forall x,y \in \mathcal{X} \;,\; \alpha, \beta \in \mathbb{R}\;|\;L(\alpha x + \beta y) = \alpha L(x) + \beta L(y)
-%		\end{equation}
-%		Applying above Statement ~\ref{q6aLinOpStmt} to ${Eq}^{n}$ ~\ref{q6aOptDefn},
-%		\begin{equation}\label{q6aPrfStart}
-%			L(\alpha x + \beta y) = \frac{1}{2}((\alpha x + \beta y) + {(\alpha x + \beta y)}^{T})
-%		\end{equation}
-%		
-%		Applying the property of sum of transpose of two matrices \\ \textit{(i.e. for two matrices $A$ and $B \rightarrow$ ${(A+B)}^{T} = {A}^{T} + {B}^{T}$)}
-%		
-%		\begin{equation}\label{q6aPrfTranspose}
-%			L(\alpha x + \beta y) = \frac{1}{2}(\alpha x + \beta y + {\alpha x}^{T} + {\beta y}^{T})
-%		\end{equation}
-%		
-%		\begin{equation}\label{q6aPrfRearrange}
-%			%L(\alpha x + \beta y) 
-%			= \frac{1}{2}(\alpha x + {\alpha x}^{T} + \beta y  + {\beta y}^{T})
-%		\end{equation}
-%		
-%		\begin{equation}\label{q6aPrfTakingCommon}
-%			%L(\alpha x + \beta y) 
-%			= \alpha (\frac{1}{2}(x + {x}^{T})) + \beta(\frac{1}{2}(y  + {y}^{T}))
-%		\end{equation}
-%		
-%		\begin{equation}\label{q6aPrfBackSubn}
-%			%L(\alpha x + \beta y) 
-%			= \alpha L(x) + \beta L(y)
-%		\end{equation}
-%		
-%		Thus, ${Eq}^{n}$ ~\ref{q6aPrfBackSubn} proves Statement~\ref{q6aLinOpStmt}. $\therefore$ the given operator $L$ is actually a \textit{Linear Operator}. \\ \textbf{Q.E.D.}
-%		
-%		\item[Question: 6.(b)] \setcounter{equation}{0} 
-%		\item[Answer:] Given a linear transformation $L : \mathcal{X} \rightarrow \mathcal{X}$ and a basis $E$ given by 
-%		
-%		${E}^{11} = \begin{bmatrix}1 & 0 \\ 0 & 0 \end{bmatrix}$, ${E}^{12} = \begin{bmatrix}0 & 1 \\ 0 & 0 \end{bmatrix}$, ${E}^{21} = \begin{bmatrix}0 & 0 \\ 1 & 0 \end{bmatrix}$, ${E}^{22} = \begin{bmatrix}0 & 0 \\ 0 & 1 \end{bmatrix}$ used on both copies of $\mathcal{X}$.
-%%		Consider $x \in \mathcal{X}$ s.t. $x = {\alpha}_{1}{E}^{11} + {\alpha}_{2}{E}^{12} + {\alpha}_{3}{E}^{21} + {\alpha}_{4}{E}^{22}$ $\Rightarrow {[x]}_{E} = \begin{bmatrix} {\alpha}_{1} \\ {\alpha}_{2} \\ {\alpha}_{3} \\ {\alpha}_{4}\end{bmatrix}$
-%%		
-%		\\ \\ By the theorem, we know that ${A}_{i} = {[L({u}^{i})]}_{v}$. But in our case, $u = v = E$. So, we can rewrite it as ${A}_{i} = {[L({E}^{ij})]}_{E}$ where $\forall i,j\in \mathbb{N} \; | \; 1 \leq i,j \leq 2$
-%		
-%		But as it is given that $L : \mathcal{X} \rightarrow \mathcal{X} \Rightarrow L$ is the Identity Operation $Id$. Thus, ${[L({E}^{ij})]}_{E} = {[{E}^{ij}]}_{E}$.
-%		
-%		So, now we can form the columns of $A = \begin{bmatrix} {A}_{1} & {A}_{2} & {A}_{3} & {A}_{4}\end{bmatrix}$ to be as, 
-%		\begin{equation}\label{q6bMatRepnForm}
-%			A = \begin{bmatrix} {[{E}^{11}]}_{E} & {[{E}^{12}]}_{E} & {[{E}^{21}]}_{E} & {[{E}^{22}]}_{E}\end{bmatrix}
-%		\end{equation}
-%		
-%		\begin{equation}\label{q6bfinalAns}
-%			\therefore A = 
-%				\begin{bmatrix} 
-%					1 & 0 & 0 & 0 \\
-%					0 & 1 & 0 & 0 \\
-%					0 & 0 & 1 & 0 \\
-%					0 & 0 & 0 & 1
-%				\end{bmatrix}
-%		\end{equation}
+		And the given polynomial is $r(x) = 2 + 3x - {x}^{2}$.
 		
-%
+		
+		$\therefore$ the components of $r(x)$ in basis $\mathcal{S}$ is 
+		
+		\begin{equation}
+			{\text{r}}_{\mathcal{S}} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}
+		\end{equation}
+		
+		\item[Question: 1.(b)] \setcounter{equation}{0} %Nagy, Page 136, Prob. 4.4.3
+		\item[Answer:] Given, $V = {\mathbb{P}}_{2}$ with the ordered basis $\mathcal{Q} = \left( {q}_{0} = 1,\;{q}_{1} = 1 - x,\;{q}_{2} = x + {x}^{2}\right)$. 
+		
+		From the definition of the basis $\mathcal{Q}$, we can rewrite it in terms of basis $\mathcal{S}$ as, 
+		
+		${q}_{0_{\mathcal{S}}} = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}$, ${q}_{1_{\mathcal{S}}} = \begin{bmatrix}1 \\ -1 \\ 0\end{bmatrix}$ and ${q}_{2_{\mathcal{S}}} = \begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}$ $\Rightarrow {Q}_{\mathcal{S}} = \begin{bmatrix}1 & 1 & 0 \\ 0 & -1 & 1 \\ 0 & 0 & 1\end{bmatrix}$
+		
+		And the given polynomial is $r(x) = 2 + 3x - {x}^{2}$.
+		\begin{equation}
+			\Rightarrow {\text{r}}_{\mathcal{S}} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}
+		\end{equation}
+		
+		Now, we need to find numbers ${\tilde{r}}_{0}$, ${\tilde{r}}_{1}$ and ${\tilde{r}}_{2}$ such that,
+		\begin{equation}{\text{r}}_{\mathcal{S}} = {\tilde{r}}_{0}{\text{q}}_{{0}_{\mathcal{S}}} + {\tilde{r}}_{1}{\text{q}}_{{1}_{\mathcal{S}}} + {\tilde{r}}_{2}{\text{q}}_{{2}_{\mathcal{S}}}\end{equation}
+		
+		\begin{equation}
+			\Rightarrow \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix} = 
+			{\tilde{r}}_{0}\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + 
+			{\tilde{r}}_{1}\begin{bmatrix}1 \\ -1 \\ 0\end{bmatrix} + 
+			{\tilde{r}}_{2}\begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}
+		\end{equation}
+		
+		${Eq}^{n}$ can be rewritten as
+		
+		\begin{equation}
+			\begin{bmatrix}1 & 1 & 0 \\ 0 & -1 & 1 \\ 0 & 0 & 1\end{bmatrix} \begin{bmatrix}{\tilde{r}}_{0} \\ {\tilde{r}}_{1} \\ {\tilde{r}}_{2}\end{bmatrix} = \begin{bmatrix} 2 \\ 3 \\ -1 \end{bmatrix}
+		\end{equation}
+		
+		Applying the Gauss method,
+		\begin{equation}
+			\left[\begin{array}{ccc|c}1 & 1 & 0 & 2\\ 0 & -1 & 1 & 3\\ 0 & 0 & 1 & -1\end{array}\right]
+		\end{equation}
+		
+		${R}_{2} \rightarrow (-1){R}_{2}$
+		\begin{equation}
+			\left[\begin{array}{ccc|c}1 & 1 & 0 & 2\\ 0 & 1 & -1 & -3\\ 0 & 0 & 1 & -1\end{array}\right]
+		\end{equation}
+		
+		${R}_{1} \rightarrow {R}_{1} + (-1){R}_{2}$
+		\begin{equation}
+			\left[\begin{array}{ccc|c}1 & 0 & 1 & 5\\ 0 & 1 & -1 & -3\\ 0 & 0 & 1 & -1\end{array}\right]
+		\end{equation}
+		
+		${R}_{2} \rightarrow {R}_{2} + {R}_{3}$
+		\begin{equation}
+			\left[\begin{array}{ccc|c}1 & 0 & 1 & 5\\ 0 & 1 & 0 & -4\\ 0 & 0 & 1 & -1\end{array}\right]
+		\end{equation}
+
+		${R}_{1} \rightarrow {R}_{1} + (-1){R}_{3}$
+		\begin{equation}
+			\left[\begin{array}{ccc|c}1 & 0 & 0 & 6\\ 0 & 1 & 0 & -4\\ 0 & 0 & 1 & -1\end{array}\right]
+		\end{equation}		
+		
+		Hence, the solution is, 
+		\begin{equation}
+			{\text{r}}_{q} = \begin{bmatrix}6 \\ -4 \\ -1\end{bmatrix}
+		\end{equation}		
+
+		\item[Question: 2.] \setcounter{equation}{0}
+		\item[Answer:] Given the matrix, 
+			\begin{equation}
+				{A}_{3} = \begin{bmatrix} 1 & 4 & 10 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}
+			\end{equation}
+			By definition, we know that, $\exists v \neq 0 \text{ s.t. } Av = \lambda v \; \Rightarrow (\lambda I - A) v = 0 \; \Leftrightarrow det(\lambda I - A) = 0$ 
+			\begin{equation}
+				\Rightarrow \lambda I - A = \begin{bmatrix}\lambda-1 & -4 & -10 \\ 0 & \lambda - 2 & 0 \\ 0 & 0 & \lambda -3\end{bmatrix}
+			\end{equation}
+			
+			\begin{equation}
+				\Rightarrow det(\lambda I - A) = (\lambda - 1)\cdot(\lambda - 2)\cdot(\lambda - 3) = 0
+			\end{equation}
+						
+			\begin{equation}
+				\therefore {\lambda}_{1} = 1, {\lambda}_{2} = 2 , {\lambda}_{3} = 3
+			\end{equation}
+			
+			Now, we shall apply the known relation $A{v}^{i} = {\lambda}_{i}{v}^{i}$ $\Rightarrow (A - {\lambda}_{i}I){v}^{i} = 0$ 
+			\begin{equation} \label{eq:q2eigVecEqn}
+				\begin{bmatrix}1 - {\lambda}_{i} & 4 & 10 \\ 0 & 2 - {\lambda}_{i} & 0 \\ 0 & 0 & 3 - {\lambda}_{i}\end{bmatrix} 
+				\begin{bmatrix}{v}^{i}_{1} \\ {v}^{i}_{2} \\ {v}^{i}_{3}\end{bmatrix} = 
+				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
+			\end{equation}
+			
+			From ${Eq}^{n}~\ref{eq:q2eigVecEqn}$, substituting ${\lambda}_{1} = 1$
+			\begin{equation}
+				\begin{bmatrix}0 & 4 & 10 \\ 0 & 1 & 0 \\ 0 & 0 & 2\end{bmatrix} 
+				\begin{bmatrix}{v}^{1}_{1} \\ {v}^{1}_{2} \\ {v}^{1}_{3}\end{bmatrix} = 
+				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
+				\Rightarrow
+				\begin{array}{c}
+					4{v}^{1}_{2} + 10{v}^{1}_{3} = 0 \\
+					{v}^{1}_{2} = 0 \\
+					2{v}^{1}_{3} = 0
+				\end{array}
+				\Rightarrow \begin{array}{c}{v}^{1}_{1} = \text{any value} \\ {v}^{1}_{2} = 0 \\ {v}^{1}_{3} = 0\end{array} \Rightarrow {v}^{1}= \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}
+			\end{equation}
+			
+			From ${Eq}^{n}~\ref{eq:q2eigVecEqn}$, substituting ${\lambda}_{2} = 2$
+			\begin{equation}
+				\begin{bmatrix}-1 & 4 & 10 \\ 0 & 0 & 0 \\ 0 & 0 & 1\end{bmatrix} 
+				\begin{bmatrix}{v}^{2}_{1} \\ {v}^{2}_{2} \\ {v}^{2}_{3}\end{bmatrix} = 
+				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
+				\Rightarrow
+				\begin{array}{c}
+					-{v}^{2}_{1} + 4{v}^{2}_{2} + 10{v}^{2}_{3} = 0 \\
+					0 = 0 \\
+					{v}^{2}_{3} = 0
+				\end{array}
+				\Rightarrow \begin{array}{c}{v}^{2}_{1} = 4{v}^{2}_{2} \\ {v}^{2}_{2}=\text{any value}\\ {v}^{2}_{3}=0\end{array} \Rightarrow {v}^{2} = \begin{bmatrix}4 \\ 1 \\ 0\end{bmatrix}
+			\end{equation}
+			
+			From ${Eq}^{n}~\ref{eq:q2eigVecEqn}$, substituting ${\lambda}_{3} = 3$
+			\begin{equation}
+				\begin{bmatrix}-2 & 4 & 10 \\ 0 & -1 & 0 \\ 0 & 0 & 0\end{bmatrix} 
+				\begin{bmatrix}{v}^{3}_{1} \\ {v}^{3}_{2} \\ {v}^{3}_{3}\end{bmatrix} = 
+				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
+				\Rightarrow
+				\begin{array}{c}
+					-2{v}^{3}_{1} + 4{v}^{3}_{2} + 10{v}^{3}_{3} = 0 \\
+					-{v}^{3}_{2} = 0 \\
+					0 = 0
+				\end{array}
+				\Rightarrow \begin{array}{c}{v}^{3}_{1} = 5{v}^{3}_{3} \\ {v}^{3}_{2}=0\\ {v}^{3}_{3}=\text{any value}\end{array} \Rightarrow {v}^{3} = \begin{bmatrix}5 \\ 0 \\ 1\end{bmatrix}
+			\end{equation}
+			
+			Now we shall verify that ${v}^{1}$, ${v}^{2}$ and ${v}^{3}$ are \textit{Linearly Independant},
+			\begin{equation}
+				{\alpha}_{1}{v}^{1}+{\alpha}_{2}{v}^{2}+{\alpha}_{3}{v}^{3} = 0
+			\end{equation}
+			
+			\begin{equation}
+				{\alpha}_{1}\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}+
+				{\alpha}_{2}\begin{bmatrix}4 \\ 1 \\ 0\end{bmatrix}+
+				{\alpha}_{3}\begin{bmatrix}5 \\ 0 \\ 1\end{bmatrix}
+				= 0
+			\end{equation}
+			
+			\begin{align}
+				{\alpha}_{1} + 4{\alpha}_{2} + 5{\alpha}_{3} = 0 \\
+				{\alpha}_{2} = 0 \\
+				{\alpha}_{3} = 0
+			\end{align}
+			
+			Solving above system of equations gives us ${\alpha}_{1} = 0$, ${\alpha}_{2} = 0$ and ${\alpha}_{3} = 0$. \\
+			$\therefore$ ${v}^{1}$, ${v}^{2}$ and ${v}^{3}$ are \textit{Linearly Independant}.
+		
+			
+		\item[Question: 3.] \setcounter{equation}{0}
+		\item[Answer:] Given the matrix, 
+			\begin{equation}
+				{A}_{4} = \begin{bmatrix} 3 & 1 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2\end{bmatrix}
+			\end{equation}
+			By definition, we know that, $\exists v \neq 0 \text{ s.t. } Av = \lambda v \; \Rightarrow (\lambda I - A) v = 0 \; \Leftrightarrow det(\lambda I - A) = 0$ 
+			\begin{equation}
+				\Rightarrow \lambda I - A = \begin{bmatrix}\lambda-3 & -1 & 0 \\ 0 & \lambda - 3 & 0 \\ 0 & 0 & \lambda -2\end{bmatrix}
+			\end{equation}
+			
+			\begin{equation}
+				\Rightarrow det(\lambda I - A) = (\lambda - 3)\cdot(\lambda - 3)\cdot(\lambda - 2) = 0
+			\end{equation}
+			
+			\begin{equation}
+				\therefore {\lambda}_{1} = 3, {\lambda}_{2} = 2
+			\end{equation}			
+			
+			Now, we shall apply the known relation $A{v}^{i} = {\lambda}_{i}{v}^{i}$ $\Rightarrow (A - {\lambda}_{i}I){v}^{i} = 0$ 
+			\begin{equation}\label{eq:q3eigVecEqn}
+				\begin{bmatrix}3 - {\lambda}_{i} & 1 & 0 \\ 0 & 3 - {\lambda}_{i} & 0 \\ 0 & 0 & 2 - {\lambda}_{i}\end{bmatrix} 
+				\begin{bmatrix}{v}^{i}_{1} \\ {v}^{i}_{2} \\ {v}^{i}_{3}\end{bmatrix} = 
+				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
+			\end{equation}
+			
+			From ${Eq}^{n}~\ref{eq:q3eigVecEqn}$, substituting ${\lambda}_{1} = 3$
+			\begin{equation}
+				\begin{bmatrix}0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1\end{bmatrix} 
+				\begin{bmatrix}{v}^{1}_{1} \\ {v}^{1}_{2} \\ {v}^{1}_{3}\end{bmatrix} = 
+				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
+				\Rightarrow
+				\begin{array}{c}
+					{v}^{1}_{2} = 0 \\
+					0 = 0 \\
+					-{v}^{1}_{3} = 0
+				\end{array}
+				\Rightarrow \begin{array}{c}{v}^{1}_{1} = \text{any value} \\ {v}^{1}_{2} = 0 \\ {v}^{1}_{3} = 0\end{array} \Rightarrow {v}^{1}= \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}
+			\end{equation}
+			
+			From ${Eq}^{n}~\ref{eq:q3eigVecEqn}$, substituting ${\lambda}_{2} = 2$
+			\begin{equation}
+				\begin{bmatrix}1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0\end{bmatrix} 
+				\begin{bmatrix}{v}^{2}_{1} \\ {v}^{2}_{2} \\ {v}^{2}_{3}\end{bmatrix} = 
+				\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
+				\Rightarrow
+				\begin{array}{c}
+					{v}^{2}_{1} = 0 \\
+					{v}^{2}_{2}= 0 \\
+					0 = 0
+				\end{array}
+				\Rightarrow \begin{array}{c}{v}^{2}_{1} = 0 \\ {v}^{2}_{2} = 0 \\ {v}^{2}_{3} = \text{any value}\end{array} \Rightarrow {v}^{2}= \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}
+			\end{equation}
+			
+			Consider the set of eigenvectors $\mathcal{V} = \{{v}^{1}, {v}^{2}\}$. Firstly,
+			\begin{equation} \label{q3EVLIStmnt}
+				\text{We know that any set of eigenvectors of a given matrix are Linearly Independent. So, ${v}^{1}, {v}^{2}$ are \textit{L.I.}}
+			\end{equation}
+			
+			Secondly, consider a linear combination $x$ such that, 
+			\begin{equation}\label{q3SpanExp}
+				\left\{x\in\mathbb{R}\;|\;\exists \; {\alpha}_{1}, {\alpha}_{2} \in \mathbb{R}, {v}^{1}, {v}^{2} \in \mathcal{V} \;;\;s.t.\;x = {\alpha}_{1}{v}^{1} + {\alpha}_{2}{v}^{2}\right\}
+			\end{equation}
+			By observing above ${Eq}^{n}$~\ref{q3SpanExp} we can see that it holds true for all cases.
+			
+			$\therefore$ based on the ${Eq}^{n}$ ~\ref{q3EVLIStmnt} and ~\ref{q3SpanExp} we can say that $\mathcal{V}$ forms a basis for ${\mathbb{R}}^{3}$.
+
+		\item[Question: 4.] \setcounter{equation}{0} 
+		\item[Answer:] We are given two similar square matrices $A$ and $B$ such that,
+			\begin{equation}\label{q4similarityRelation}B = {P}^{-1} A P\end{equation}
+			
+			Consider the characteristic relation of matrix $B$, 
+			\begin{equation}\label{q4BcharReln1} det(\lambda I - B) \end{equation}
+			
+			Apply ${Eq}^{n}~\ref{q4similarityRelation}$ in ${Eq}^{n}~\ref{q4BcharReln}$, 
+			\begin{equation}\label{q4BcharReln2}
+				\Rightarrow  det(\lambda I - B) =  det(\lambda I - {P}^{-1} A P) 
+			\end{equation}
+			
+			The identity matrix $I$ can also be written as ${P}^{-1} I P$. Substituting in ${Eq}^{n}$ ~\ref{q4BcharReln2}, 
+			\begin{equation}\label{q4BcharReln3}
+				\Rightarrow  det(\lambda I - B) =  det(\lambda {P}^{-1} I P - {P}^{-1} A P) 
+			\end{equation}
+			
+			Now we shall take ${P}^{-1}$ and $P$ out common, 
+			
+			\begin{equation}\label{q4BcharReln4}
+				\Rightarrow  det(\lambda I - B) =  det({P}^{-1} (\lambda I - A) P) 
+			\end{equation}
+			
+			We know that for compatible square matrices $A$ and $B$, $det(AB) = det(A)det(B)$. So ${Eq}^{n}$ ~\ref{q4BcharReln4} becomes, 
+			\begin{equation}\label{q4BcharReln5}
+				\Rightarrow  det(\lambda I - B) =  det({P}^{-1}) det(\lambda I - A) det(P) 
+			\end{equation}
+			
+			Cancelling out $ det({P}^{-1})$ by $det(P)$
+			\begin{equation}\label{q4BcharReln6}
+				\Rightarrow  det(\lambda I - B) =  det(\lambda I - A)
+			\end{equation}
+			
+			When the relation in ${Eq}^{n}$ ~\ref{q4BcharReln6} is equated to zero, we prove that the two matrices have the same eigenvalues as well as the characteristic equations. I.E.,
+			\begin{equation}\label{q4BcharReln6}
+				\Rightarrow  det(\lambda I - B) =  det(\lambda I - A) = 0
+			\end{equation}
+			
+			\textbf{Q.E.D.}
+
+		\item[Question: 5.] \setcounter{equation}{0} \textbf{$P$ is the eigenvector matrix}
+		\item[Answer:] Given a matrix ${A}_{3}$ such that,
+		
+			\begin{equation} \label{q5Given}
+				{A}_{3} = \begin{bmatrix}1 & 4 & 10 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}
+			\end{equation}
+			
+			From Question: 2. We found the eigenvalues to be ${\lambda}_{1} = 1$, ${\lambda}_{2} = 2$, ${\lambda}_{3} = 3$. 
+			
+			Using these eigenvalues, we can create the diagonal martix, $\Lambda = diag({\lambda}_{1}, {\lambda}_{2}, {\lambda}_{3})$,
+			\begin{equation}\label{q5DiagMat}
+				\Lambda = \begin{bmatrix}1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}
+			\end{equation}
+			
+			To show similarity between $A$ and $\Lambda$, we need to find a matrix $P$ such that $\Lambda = P A {P}^{-1}$
+			
+			Consider a matrix $P = \begin{bmatrix}\end{bmatrix}$ such 
+			
+		\item[Question: 6.(a)] \setcounter{equation}{0} 
+		\item[Answer:] Given, a vector space $(\mathcal{X}, \mathbb{R})$ where $\mathcal{X}$ is a set of 2 x 2 matrices with real coefficients.
+		
+		An operation is defined $L : \mathcal{X} \rightarrow \mathcal{X}$ by 
+		\begin{equation}\label{q6aOptDefn}
+			L(M) = \frac{1}{2} (M + {M}^{T})
+		\end{equation}
+		Where $M \in \mathcal{X}$ is a 2 x 2 real matrix
+		
+		The operator $L$ will be considered a \textit{Linear Operator} if, 
+		\begin{equation}\label{q6aLinOpStmt}
+			\forall x,y \in \mathcal{X} \;,\; \alpha, \beta \in \mathbb{R}\;|\;L(\alpha x + \beta y) = \alpha L(x) + \beta L(y)
+		\end{equation}
+		Applying above Statement ~\ref{q6aLinOpStmt} to ${Eq}^{n}$ ~\ref{q6aOptDefn},
+		\begin{equation}\label{q6aPrfStart}
+			L(\alpha x + \beta y) = \frac{1}{2}((\alpha x + \beta y) + {(\alpha x + \beta y)}^{T})
+		\end{equation}
+		
+		Applying the property of sum of transpose of two matrices \\ \textit{(i.e. for two matrices $A$ and $B \rightarrow$ ${(A+B)}^{T} = {A}^{T} + {B}^{T}$)}
+		
+		\begin{equation}\label{q6aPrfTranspose}
+			L(\alpha x + \beta y) = \frac{1}{2}(\alpha x + \beta y + {\alpha x}^{T} + {\beta y}^{T})
+		\end{equation}
+		
+		\begin{equation}\label{q6aPrfRearrange}
+			%L(\alpha x + \beta y) 
+			= \frac{1}{2}(\alpha x + {\alpha x}^{T} + \beta y  + {\beta y}^{T})
+		\end{equation}
+		
+		\begin{equation}\label{q6aPrfTakingCommon}
+			%L(\alpha x + \beta y) 
+			= \alpha (\frac{1}{2}(x + {x}^{T})) + \beta(\frac{1}{2}(y  + {y}^{T}))
+		\end{equation}
+		
+		\begin{equation}\label{q6aPrfBackSubn}
+			%L(\alpha x + \beta y) 
+			= \alpha L(x) + \beta L(y)
+		\end{equation}
+		
+		Thus, ${Eq}^{n}$ ~\ref{q6aPrfBackSubn} proves Statement~\ref{q6aLinOpStmt}. $\therefore$ the given operator $L$ is actually a \textit{Linear Operator}. \\ \textbf{Q.E.D.}
+		
+		\item[Question: 6.(b)] \setcounter{equation}{0} 
+		\item[Answer:] Given a linear transformation $L : \mathcal{X} \rightarrow \mathcal{X}$ and a basis $E$ given by 
+		
+		${E}^{11} = \begin{bmatrix}1 & 0 \\ 0 & 0 \end{bmatrix}$, ${E}^{12} = \begin{bmatrix}0 & 1 \\ 0 & 0 \end{bmatrix}$, ${E}^{21} = \begin{bmatrix}0 & 0 \\ 1 & 0 \end{bmatrix}$, ${E}^{22} = \begin{bmatrix}0 & 0 \\ 0 & 1 \end{bmatrix}$ used on both copies of $\mathcal{X}$.
+%		Consider $x \in \mathcal{X}$ s.t. $x = {\alpha}_{1}{E}^{11} + {\alpha}_{2}{E}^{12} + {\alpha}_{3}{E}^{21} + {\alpha}_{4}{E}^{22}$ $\Rightarrow {[x]}_{E} = \begin{bmatrix} {\alpha}_{1} \\ {\alpha}_{2} \\ {\alpha}_{3} \\ {\alpha}_{4}\end{bmatrix}$
+%		
+		\\ \\ By the theorem, we know that ${A}_{i} = {[L({u}^{i})]}_{v}$. But in our case, $u = v = E$. So, we can rewrite it as ${A}_{i} = {[L({E}^{ij})]}_{E}$ where $\forall i,j\in \mathbb{N} \; | \; 1 \leq i,j \leq 2$
+		
+		But as it is given that $L : \mathcal{X} \rightarrow \mathcal{X} \Rightarrow L$ is the Identity Operation $Id$. Thus, ${[L({E}^{ij})]}_{E} = {[{E}^{ij}]}_{E}$.
+		
+		So, now we can form the columns of $A = \begin{bmatrix} {A}_{1} & {A}_{2} & {A}_{3} & {A}_{4}\end{bmatrix}$ to be as, 
+		\begin{equation}\label{q6bMatRepnForm}
+			A = \begin{bmatrix} {[{E}^{11}]}_{E} & {[{E}^{12}]}_{E} & {[{E}^{21}]}_{E} & {[{E}^{22}]}_{E}\end{bmatrix}
+		\end{equation}
+		
+		\begin{equation}\label{q6bfinalAns}
+			\therefore A = 
+				\begin{bmatrix} 
+					1 & 0 & 0 & 0 \\
+					0 & 1 & 0 & 0 \\
+					0 & 0 & 1 & 0 \\
+					0 & 0 & 0 & 1
+				\end{bmatrix}
+		\end{equation}
+		
+
 		\item[Question: 7.(a)] \setcounter{equation}{0} 
 		\item[Answer:] 
 		
