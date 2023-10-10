@@ -20,18 +20,18 @@
 
 \begin{document}
 	
-%	\begin{titlepage}
-%	    \centering
-%	    \vspace{2cm}
-%	    \Huge\textbf{Mathematics for Robotics \\ ROB-GY 6103 \\ Homework 3 Answers}
-%	    \vspace{1cm}
-%	    \\ \Large \today
-%	    \vfill
-%	    \Large \myName
-%	\end{titlepage}
+	\begin{titlepage}
+	    \centering
+	    \vspace{2cm}
+	    \Huge\textbf{Mathematics for Robotics \\ ROB-GY 6103 \\ Homework 3 Answers}
+	    \vspace{1cm}
+	    \\ \Large \today
+	    \vfill
+	    \Large \myName
+	\end{titlepage}
 	
 	\begin{qalist}			
-		\item[Question: 1.(a)] \setcounter{equation}{0} Nagy, Page 136, Prob. 4.4.3
+		\item[Question: 1.(a)] \setcounter{equation}{0} %Nagy, Page 136, Prob. 4.4.3
 		\item[Answer:] Given, $V = {\mathbb{P}}_{2}$ with the ordered basis $\mathcal{S} = \left( {p}_{0} = 1,\;{p}_{1} = x,\;{p}_{2} = {x}^{2}\right)$ 
 		
 		And the given polynomial is $r(x) = 2 + 3x - {x}^{2}$.
@@ -296,7 +296,7 @@
 			
 			\textbf{Q.E.D.}
 
-		\item[Question: 5.] \setcounter{equation}{0} \textbf{$P$ is the eigenvector matrix}
+		\item[Question: 5.] \setcounter{equation}{0}
 		\item[Answer:] Given a matrix ${A}_{3}$ such that,
 		
 			\begin{equation} \label{q5Given}
@@ -312,7 +312,41 @@
 			
 			To show similarity between $A$ and $\Lambda$, we need to find a matrix $P$ such that $\Lambda = P A {P}^{-1}$
 			
-			Consider a matrix $P = \begin{bmatrix}\end{bmatrix}$ such 
+			Consider a matrix $P = \begin{bmatrix} {v}^{1} & {v}^{2} & {v}^{3}\end{bmatrix}$ where ${v}^{1}, {v}^{2}$ and ${v}^{3}$ are the eigenvectors of $A$. 
+			\begin{equation}\label{q5P}
+				P = 
+					\begin{bmatrix}
+						1 & 4 & 5 \\
+						0 & 1 & 0 \\
+						0 & 0 & 1
+					\end{bmatrix}
+			\end{equation}
+			
+			Testing for invertibility, $det(P) = 1$. As the determinant is non-zero, we can conclude that $P$ is invertible.
+			
+			In Question: 2. we already proved that ${v}^{1}$, ${v}^{2}$ and ${v}^{3}$ are \textit{Linearly Independant}.
+			
+			As these two conditions are satisfied, we can therefore test for similarity, 
+			\begin{equation}\label{q5SimilarityEqn}
+				{A}_{3} = P\Lambda{P}^{-1}
+			\end{equation}
+			\begin{equation}\label{q5SimilarityTestSt}
+				{A}_{3} = 	\begin{bmatrix}1 & 4 & 5 \\0 & 1 & 0 \\0 & 0 & 1\end{bmatrix}\begin{bmatrix}1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}{\begin{bmatrix}1 & 4 & 5 \\0 & 1 & 0 \\0 & 0 & 1\end{bmatrix}}^{-1}
+			\end{equation}			
+			\begin{equation}\label{q5SimilarityTest2}
+				 = 	\begin{bmatrix}1 & 4 & 5 \\0 & 1 & 0 \\0 & 0 & 1\end{bmatrix}\begin{bmatrix}1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}\begin{bmatrix}1 & 0 & 0 \\0 & 0.5 & 0 \\0 & 0 & 0.333\end{bmatrix}
+			\end{equation}
+			\begin{equation}\label{q5SimilarityTest3}
+				 = 	\begin{bmatrix}1 & 8 & 15 \\0 & 2 & 0 \\0 & 0 & 3\end{bmatrix}\begin{bmatrix}1 & 0 & 0 \\0 & 0.5 & 0 \\0 & 0 & 0.333\end{bmatrix}
+			\end{equation}
+			\begin{equation}\label{q5SimilaityTestFin}
+				= \begin{bmatrix}1 & 4 & 10 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}
+			\end{equation}
+			
+			$\therefore$ \textbf{LHS = RHS}
+			
+			Thus, we can say that matrix $A$ is similar to a diagonal matrix $\Lambda$.
+			\textbf{Q.E.D.}
 			
 		\item[Question: 6.(a)] \setcounter{equation}{0} 
 		\item[Answer:] Given, a vector space $(\mathcal{X}, \mathbb{R})$ where $\mathcal{X}$ is a set of 2 x 2 matrices with real coefficients.
