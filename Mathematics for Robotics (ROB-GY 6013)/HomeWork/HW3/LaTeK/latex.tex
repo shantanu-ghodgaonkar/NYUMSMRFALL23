@@ -190,7 +190,7 @@
 			$\therefore$ ${v}^{1}$, ${v}^{2}$ and ${v}^{3}$ are \textit{Linearly Independant}.
 		
 			
-		\item[Question: 3.] \setcounter{equation}{0}
+		\item[Question: 3.] \setcounter{equation}{0} \textbf{IS THE BASIS CORRECT? The basis is LD. So it is wrong}
 		\item[Answer:] Given the matrix, 
 			\begin{equation}
 				{A}_{4} = \begin{bmatrix} 3 & 1 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2\end{bmatrix}
@@ -347,7 +347,7 @@
 			
 			Thus, we can say that matrix $A$ is similar to a diagonal matrix $\Lambda$.
 			\textbf{Q.E.D.}
-			
+%			
 		\item[Question: 6.(a)] \setcounter{equation}{0} 
 		\item[Answer:] Given, a vector space $(\mathcal{X}, \mathbb{R})$ where $\mathcal{X}$ is a set of 2 x 2 matrices with real coefficients.
 		
@@ -389,7 +389,7 @@
 		
 		Thus, ${Eq}^{n}$ ~\ref{q6aPrfBackSubn} proves Statement~\ref{q6aLinOpStmt}. $\therefore$ the given operator $L$ is actually a \textit{Linear Operator}. \\ \textbf{Q.E.D.}
 		
-		\item[Question: 6.(b)] \setcounter{equation}{0} 
+		\item[Question: 6.(b)] \setcounter{equation}{0} \textbf{RECHECK THIS ANSWER}
 		\item[Answer:] Given a linear transformation $L : \mathcal{X} \rightarrow \mathcal{X}$ and a basis $E$ given by 
 		
 		${E}^{11} = \begin{bmatrix}1 & 0 \\ 0 & 0 \end{bmatrix}$, ${E}^{12} = \begin{bmatrix}0 & 1 \\ 0 & 0 \end{bmatrix}$, ${E}^{21} = \begin{bmatrix}0 & 0 \\ 1 & 0 \end{bmatrix}$, ${E}^{22} = \begin{bmatrix}0 & 0 \\ 0 & 1 \end{bmatrix}$ used on both copies of $\mathcal{X}$.
@@ -412,14 +412,64 @@
 					0 & 0 & 1 & 0 \\
 					0 & 0 & 0 & 1
 				\end{bmatrix}
-		\end{equation}
-		
+		\end{equation}		
 
-		\item[Question: 7.(a)] \setcounter{equation}{0} 
-		\item[Answer:] 
+		\item[Question: 7.(a)] \setcounter{equation}{0} Let $A$ be an $n\times n$ matrix with possible complex coefficients. Let $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ by $L(x) = Ax$. Note that the field is $\mathcal{F} = \mathbb{C}$. Compute the matrix representation of $L$ when the natural basis is used in ${\mathbb{C}}^{n}$. Call your representation $\hat{A}$ and find its relation to the original matrix $A$.
+		\item[Answer:] Given a linear operator $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ defined by $L(x) = Ax$ with the natural basis ($u = \{{u}^{1} \ldots {u}^{n}\}$) applied on both, the domain and codomain.
 		
-		\item[Question: 7.(b)] \setcounter{equation}{0} 
-		\item[Answer:] 
+			Consider $x \in {\mathbb{C}}^{n}$, such that $x = {\alpha}_{1}{u}^{1} + \ldots + {\alpha}_{n}{u}^{n}$. It can be represented as,
+			\begin{equation}
+				{[x]}_{u} = \begin{bmatrix} {\alpha}_{1} \\ .\\ .\\ . \\ {\alpha}_{n}\end{bmatrix} \in {\mathbb{C}}^{n}
+			\end{equation}
+			
+			Now let us compute the matrix representation, 
+			\begin{equation}
+				{[L(x)]}_{u} = {[L( {\alpha}_{1}{u}^{1} + \ldots + {\alpha}_{n}{u}^{n})]}_{u}
+			\end{equation}
+			\begin{equation}
+				{[L(x)]}_{u} = {[L({\alpha}_{1}{u}^{1}) + \ldots + L({\alpha}_{n}{u}^{n})]}_{u}
+			\end{equation}
+			\begin{equation}
+				{[L(x)]}_{u} = {[{\alpha}_{1}L({u}^{1}) + \ldots + {\alpha}_{n}L({u}^{n})]}_{u}
+			\end{equation}
+			
+			But from the theorem on matrix representation, we know that ${[L(x)]}_{v} = A{[x]}_{u}$. But in our case $u = v$. So, above equation can be rewitten as, 
+			\begin{equation}
+				\hat{A}{[x]}_{u} = {[{\alpha}_{1}L({u}^{1}) + \ldots + {\alpha}_{n}L({u}^{n})]}_{u}
+			\end{equation}
+			Where, $\hat{A}$ is the Matrix Representation of $L$.
+			\begin{equation}
+				\hat{A}{[x]}_{u} = {[{\alpha}_{1}A{u}^{1} + \ldots + {\alpha}_{n}A{u}^{n}]}_{u}
+			\end{equation}
+			\begin{equation}
+				\hat{A}{[x]}_{u} = 
+					\begin{bmatrix}A{u}^{1} & \ldots & A{u}^{n}\end{bmatrix}
+					\begin{bmatrix}{\alpha}_{1} \\ \vdots \\ {\alpha}_{n}\end{bmatrix}
+			\end{equation}
+			We know that for the natural basis $u$, % = \begin{bmatrix}1 & 0 & 0 & \ldots & 0 \\ 0 & 1 & 0 & \ldots & 0 \\ 0 & 0 & 1 & \ldots & 0 \\ \vdots & \vdots & \vdots & \vdots & \vdots \\ 0 & 0 & 0 & \ldots & 1\end{bmatrix} 
+			$A \times u = A$.
+			\begin{equation}
+				\hat{A}{[x]}_{u} = A {[x]}_{u}
+			\end{equation}
+
+			$\therefore \hat{A} = A$. \textbf{Q.E.D.}
+			
+		
+		\item[Question: 7.(b)] \setcounter{equation}{0}  Let $A$ be an $n\times n$ matrix with possible complex coefficients. Let $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ by $L(x) = Ax$. Note that the field is $\mathcal{F} = \mathbb{C}$. Suppose that the eigenvalues for $A$ are distinct. Compute the matrix representation $L$ with respect to a basis constructed from the eigenvectors of A. Call your representation $\hat{A}$.
+		\item[Answer:] As an extension to the answer of Question: 7.(a), 
+			\begin{equation}
+				\hat{A}{[x]}_{u} = {[L(x)]}_{v}
+			\end{equation}
+			
+			Where, $v = \{{v}^{1} \ldots {v}^{n}\}$  is the basis consisting of all the distinct eigenvectors of $A$.
+			
+			\begin{equation}
+				\hat{A}{[x]}_{u} = {[{\alpha}_{1}A{u}^{1} + \ldots + {\alpha}_{n}A{u}^{n}]}_{v}
+			\end{equation}	
+			
+			\begin{equation}
+				\hat{A}{[x]}_{u} = {\alpha}_{1}{[A{u}^{1}]}_{v} + \ldots + {\alpha}_{n}{[A{u}^{n}]}_{v}
+			\end{equation}	
 		
 	\end{qalist}
 \end{document}
