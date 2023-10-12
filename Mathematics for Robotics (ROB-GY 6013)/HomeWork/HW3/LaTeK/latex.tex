@@ -190,7 +190,7 @@
 			$\therefore$ ${v}^{1}$, ${v}^{2}$ and ${v}^{3}$ are \textit{Linearly Independant}.
 		
 			
-		\item[Question: 3.] \setcounter{equation}{0} \textbf{IS THE BASIS CORRECT? The basis is LD. So it is wrong}
+		\item[Question: 3.] \setcounter{equation}{0}
 		\item[Answer:] Given the matrix, 
 			\begin{equation}
 				{A}_{4} = \begin{bmatrix} 3 & 1 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2\end{bmatrix}
@@ -252,9 +252,9 @@
 			\begin{equation}\label{q3SpanExp}
 				\left\{x\in\mathbb{R}\;|\;\exists \; {\alpha}_{1}, {\alpha}_{2} \in \mathbb{R}, {v}^{1}, {v}^{2} \in \mathcal{V} \;;\;s.t.\;x = {\alpha}_{1}{v}^{1} + {\alpha}_{2}{v}^{2}\right\}
 			\end{equation}
-			By observing above ${Eq}^{n}$~\ref{q3SpanExp} we can see that it holds true for all cases.
+			By observing above ${Eq}^{n}$~\ref{q3SpanExp} we can see that the basis does not span the entire vector space.
 			
-			$\therefore$ based on the ${Eq}^{n}$ ~\ref{q3EVLIStmnt} and ~\ref{q3SpanExp} we can say that $\mathcal{V}$ forms a basis for ${\mathbb{R}}^{3}$.
+			$\therefore$ based on the ${Eq}^{n}$ ~\ref{q3EVLIStmnt} and ~\ref{q3SpanExp} we can say that $\mathcal{V}$ does not form a basis for ${\mathbb{R}}^{3}$.
 
 		\item[Question: 4.] \setcounter{equation}{0} 
 		\item[Answer:] We are given two similar square matrices $A$ and $B$ such that,
@@ -389,7 +389,7 @@
 		
 		Thus, ${Eq}^{n}$ ~\ref{q6aPrfBackSubn} proves Statement~\ref{q6aLinOpStmt}. $\therefore$ the given operator $L$ is actually a \textit{Linear Operator}. \\ \textbf{Q.E.D.}
 		
-		\item[Question: 6.(b)] \setcounter{equation}{0} \textbf{RECHECK THIS ANSWER}
+		\item[Question: 6.(b)] \setcounter{equation}{0}
 		\item[Answer:] Given a linear transformation $L : \mathcal{X} \rightarrow \mathcal{X}$ and a basis $E$ given by 
 		
 		${E}^{11} = \begin{bmatrix}1 & 0 \\ 0 & 0 \end{bmatrix}$, ${E}^{12} = \begin{bmatrix}0 & 1 \\ 0 & 0 \end{bmatrix}$, ${E}^{21} = \begin{bmatrix}0 & 0 \\ 1 & 0 \end{bmatrix}$, ${E}^{22} = \begin{bmatrix}0 & 0 \\ 0 & 1 \end{bmatrix}$ used on both copies of $\mathcal{X}$.
@@ -397,22 +397,20 @@
 %		
 		\\ \\ By the theorem, we know that ${A}_{i} = {[L({u}^{i})]}_{v}$. But in our case, $u = v = E$. So, we can rewrite it as ${A}_{i} = {[L({E}^{ij})]}_{E}$ where $\forall i,j\in \mathbb{N} \; | \; 1 \leq i,j \leq 2$
 		
-		But as it is given that $L : \mathcal{X} \rightarrow \mathcal{X} \Rightarrow L$ is the Identity Operation $Id$. Thus, ${[L({E}^{ij})]}_{E} = {[{E}^{ij}]}_{E}$.
-		
-		So, now we can form the columns of $A = \begin{bmatrix} {A}_{1} & {A}_{2} & {A}_{3} & {A}_{4}\end{bmatrix}$ to be as, 
-		\begin{equation}\label{q6bMatRepnForm}
-			A = \begin{bmatrix} {[{E}^{11}]}_{E} & {[{E}^{12}]}_{E} & {[{E}^{21}]}_{E} & {[{E}^{22}]}_{E}\end{bmatrix}
+		\begin{equation}
+			A = \begin{bmatrix} {A}_{1} &  {A}_{2} &  {A}_{3} &  {A}_{4} \end{bmatrix}
 		\end{equation}
 		
-		\begin{equation}\label{q6bfinalAns}
-			\therefore A = 
-				\begin{bmatrix} 
-					1 & 0 & 0 & 0 \\
-					0 & 1 & 0 & 0 \\
-					0 & 0 & 1 & 0 \\
-					0 & 0 & 0 & 1
-				\end{bmatrix}
-		\end{equation}		
+		\begin{align}
+			{A}_{1} = {[L({E}^{11})]}_{E} ={\left[ \frac{1}{2} (\begin{bmatrix}1 & 0 \\ 0 & 0\end{bmatrix} + \begin{bmatrix}1 & 0 \\ 0 & 0\end{bmatrix})\right]}_{E} = \begin{bmatrix}1 \\ 0 \\ 0 \\ 0\end{bmatrix} \\
+			{A}_{2} = {[L({E}^{12})]}_{E} ={\left[ \frac{1}{2} (\begin{bmatrix}0 & 1 \\ 0 & 0\end{bmatrix} + \begin{bmatrix}0 & 0 \\ 1 & 0\end{bmatrix})\right]}_{E} = \begin{bmatrix}0 \\ 0.5 \\ 0.5 \\ 0\end{bmatrix} \\
+			{A}_{3} = {[L({E}^{21})]}_{E} ={\left[ \frac{1}{2} (\begin{bmatrix}0 & 1 \\ 0 & 0\end{bmatrix} + \begin{bmatrix}0 & 0 \\ 1 & 0\end{bmatrix})\right]}_{E} = \begin{bmatrix}0 \\ 0.5 \\ 0.5 \\ 0\end{bmatrix} \\
+			{A}_{4} = {[L({E}^{22})]}_{E} ={\left[ \frac{1}{2} (\begin{bmatrix}0 & 0 \\ 0 & 1\end{bmatrix} + \begin{bmatrix}0 & 0 \\ 0 & 1\end{bmatrix})\right]}_{E} = \begin{bmatrix}0 \\ 0 \\ 0 \\ 1\end{bmatrix} \\
+		\end{align}
+		
+		\begin{equation}
+			\therefore A = \begin{bmatrix}1 & 0 & 0 & 0 \\ 0 & 0.5 & 0.5 & 0\\ 0 & 0.5 & 0.5 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}
+		\end{equation}
 
 		\item[Question: 7.(a)] \setcounter{equation}{0} Let $A$ be an $n\times n$ matrix with possible complex coefficients. Let $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ by $L(x) = Ax$. Note that the field is $\mathcal{F} = \mathbb{C}$. Compute the matrix representation of $L$ when the natural basis is used in ${\mathbb{C}}^{n}$. Call your representation $\hat{A}$ and find its relation to the original matrix $A$.
 		\item[Answer:] Given a linear operator $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ defined by $L(x) = Ax$ with the natural basis ($u = \{{u}^{1} \ldots {u}^{n}\}$) applied on both, the domain and codomain.
@@ -456,20 +454,33 @@
 			
 		
 		\item[Question: 7.(b)] \setcounter{equation}{0}  Let $A$ be an $n\times n$ matrix with possible complex coefficients. Let $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ by $L(x) = Ax$. Note that the field is $\mathcal{F} = \mathbb{C}$. Suppose that the eigenvalues for $A$ are distinct. Compute the matrix representation $L$ with respect to a basis constructed from the eigenvectors of A. Call your representation $\hat{A}$.
-		\item[Answer:] As an extension to the answer of Question: 7.(a), 
+		\item[Answer:] Given a linear operator $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ defined by $L(x) = Ax$ with the basis created of eigenvectors of A ($M = \{ {v}^{1}, {v}^{2}, \ldots {v}^{n}\}$) applied on the domain.
+
+			And the eigenvalues $\Lambda \in {\mathbb{C}}^{n}$, such that
 			\begin{equation}
-				\hat{A}{[x]}_{u} = {[L(x)]}_{v}
+				{[\Lambda]}_{u} = \begin{bmatrix} {\lambda}_{1} \\ {\lambda}_{2} \\ \vdots \\ {\lambda}_{n}\end{bmatrix} \in {\mathbb{C}}^{n}
 			\end{equation}
 			
-			Where, $v = \{{v}^{1} \ldots {v}^{n}\}$  is the basis consisting of all the distinct eigenvectors of $A$.
-			
+			Now let us compute the matrix reperesntation, 
 			\begin{equation}
-				\hat{A}{[x]}_{u} = {[{\alpha}_{1}A{u}^{1} + \ldots + {\alpha}_{n}A{u}^{n}]}_{v}
-			\end{equation}	
-			
+			{[L(\Lambda)]}_{M} = {[L( {\lambda}_{1}{v}^{1} + \ldots + {\lambda}_{n}{v}^{n})]}_{M}
+			\end{equation}
 			\begin{equation}
-				\hat{A}{[x]}_{u} = {\alpha}_{1}{[A{u}^{1}]}_{v} + \ldots + {\alpha}_{n}{[A{u}^{n}]}_{v}
-			\end{equation}	
-		
+				{[L(\Lambda)]}_{M} = {[L({\lambda}_{1}{v}^{1}) + \ldots + L({\lambda}_{n}{v}^{n})]}_{M}
+			\end{equation}
+			\begin{equation}
+				{[L(\Lambda)]}_{M} = {[{\lambda}_{1}L({v}^{1}) + \ldots + {\lambda}_{n}L({v}^{n})]}_{M}
+			\end{equation}
+%			From the theorem on matrix representation, we know that ${[L(x)]}_{v} = A{[x]}_{u}$. \\ So, above equation can be rewitten as, 
+%			\begin{equation}
+%				\hat{A}{[\Lambda]}_{M} = {[{\lambda}_{1}L({v}^{1}) + \ldots + {\lambda}_{n}L({v}^{n})]}_{M}
+%			\end{equation}
+			\begin{equation}
+				{[A\Lambda]}_{M} = {[{\lambda}_{1}A{v}^{1} + \ldots + {\lambda}_{n}A{v}^{n}]}_{M}
+			\end{equation}
+			\begin{equation}
+				{[A\Lambda]}_{M} = {[{\lambda}_{1}A{v}^{1}]}_{M} + \ldots + {[{\lambda}_{n}A{v}^{n}]}_{M}
+			\end{equation}
+			
 	\end{qalist}
 \end{document}
