@@ -256,6 +256,7 @@
 			
 			$\therefore$ based on the ${Eq}^{n}$ ~\ref{q3EVLIStmnt} and ~\ref{q3SpanExp} we can say that $\mathcal{V}$ does not form a basis for ${\mathbb{R}}^{3}$.
 
+		\newpage
 		\item[Question: 4.] \setcounter{equation}{0} 
 		\item[Answer:] We are given two similar square matrices $A$ and $B$ such that,
 			\begin{equation}\label{q4similarityRelation}B = {P}^{-1} A P\end{equation}
@@ -389,6 +390,7 @@
 		
 		Thus, ${Eq}^{n}$ ~\ref{q6aPrfBackSubn} proves Statement~\ref{q6aLinOpStmt}. $\therefore$ the given operator $L$ is actually a \textit{Linear Operator}. \\ \textbf{Q.E.D.}
 		
+		\newpage
 		\item[Question: 6.(b)] \setcounter{equation}{0}
 		\item[Answer:] Given a linear transformation $L : \mathcal{X} \rightarrow \mathcal{X}$ and a basis $E$ given by 
 		
@@ -412,7 +414,7 @@
 			\therefore A = \begin{bmatrix}1 & 0 & 0 & 0 \\ 0 & 0.5 & 0.5 & 0\\ 0 & 0.5 & 0.5 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}
 		\end{equation}
 
-		\item[Question: 7.(a)] \setcounter{equation}{0} Let $A$ be an $n\times n$ matrix with possible complex coefficients. Let $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ by $L(x) = Ax$. Note that the field is $\mathcal{F} = \mathbb{C}$. Compute the matrix representation of $L$ when the natural basis is used in ${\mathbb{C}}^{n}$. Call your representation $\hat{A}$ and find its relation to the original matrix $A$.
+		\item[Question: 7.(a)] \setcounter{equation}{0} % Let $A$ be an $n\times n$ matrix with possible complex coefficients. Let $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ by $L(x) = Ax$. Note that the field is $\mathcal{F} = \mathbb{C}$. Compute the matrix representation of $L$ when the natural basis is used in ${\mathbb{C}}^{n}$. Call your representation $\hat{A}$ and find its relation to the original matrix $A$.
 		\item[Answer:] Given a linear operator $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ defined by $L(x) = Ax$ with the natural basis ($u = \{{u}^{1} \ldots {u}^{n}\}$) applied on both, the domain and codomain.
 		
 			Consider $x \in {\mathbb{C}}^{n}$, such that $x = {\alpha}_{1}{u}^{1} + \ldots + {\alpha}_{n}{u}^{n}$. It can be represented as,
@@ -453,34 +455,42 @@
 			$\therefore \hat{A} = A$. \textbf{Q.E.D.}
 			
 		
-		\item[Question: 7.(b)] \setcounter{equation}{0}  Let $A$ be an $n\times n$ matrix with possible complex coefficients. Let $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ by $L(x) = Ax$. Note that the field is $\mathcal{F} = \mathbb{C}$. Suppose that the eigenvalues for $A$ are distinct. Compute the matrix representation $L$ with respect to a basis constructed from the eigenvectors of A. Call your representation $\hat{A}$.
+		\item[Question: 7.(b)] \setcounter{equation}{0}  %Let $A$ be an $n\times n$ matrix with possible complex coefficients. Let $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ by $L(x) = Ax$. Note that the field is $\mathcal{F} = \mathbb{C}$. Suppose that the eigenvalues for $A$ are distinct. Compute the matrix representation $L$ with respect to a basis constructed from the eigenvectors of A. Call your representation $\hat{A}$.
 		\item[Answer:] Given a linear operator $L  : {\mathbb{C}}^{n} \rightarrow {\mathbb{C}}^{n}$ defined by $L(x) = Ax$ with the basis created of eigenvectors of A ($M = \{ {v}^{1}, {v}^{2}, \ldots {v}^{n}\}$) applied on the domain.
 
 			And the eigenvalues $\Lambda \in {\mathbb{C}}^{n}$, such that
 			\begin{equation}
-				{[\Lambda]}_{u} = \begin{bmatrix} {\lambda}_{1} \\ {\lambda}_{2} \\ \vdots \\ {\lambda}_{n}\end{bmatrix} \in {\mathbb{C}}^{n}
+				{[\Lambda]}_{M} = \begin{bmatrix} {\lambda}_{1} \\ {\lambda}_{2} \\ \vdots \\ {\lambda}_{n}\end{bmatrix} \in {\mathbb{C}}^{n}
 			\end{equation}
 			
-			Now let us compute the matrix reperesntation, 
+			Now let us compute the matrix representation, 
 			\begin{equation}
-			{[L(\Lambda)]}_{M} = {[L( {\lambda}_{1}{v}^{1} + \ldots + {\lambda}_{n}{v}^{n})]}_{M}
+			{[L(M\Lambda)]}_{M} = {[L( {\lambda}_{1}{v}^{1} + \ldots + {\lambda}_{n}{v}^{n})]}_{M}
 			\end{equation}
 			\begin{equation}
-				{[L(\Lambda)]}_{M} = {[L({\lambda}_{1}{v}^{1}) + \ldots + L({\lambda}_{n}{v}^{n})]}_{M}
+				{[L(M\Lambda)]}_{M} = {[{\lambda}_{1}L({v}^{1})]}_{M} + \ldots + {[{\lambda}_{n}L({v}^{n})]}_{M}
+			\end{equation}
+			But from the theorem on matrix representation, we know that ${[L(x)]}_{v} = A{[x]}_{u}$,
+			\begin{equation}
+				\hat{A}{[M\Lambda]}_{M} = \begin{bmatrix}L({v}^{1}) & \ldots & L({v}^{n})\end{bmatrix} \begin{bmatrix}{\lambda}_{1} \\ \vdots \\ {\lambda}_{n}\end{bmatrix}
 			\end{equation}
 			\begin{equation}
-				{[L(\Lambda)]}_{M} = {[{\lambda}_{1}L({v}^{1}) + \ldots + {\lambda}_{n}L({v}^{n})]}_{M}
+				\hat{A}{[M\Lambda]}_{M} = \begin{bmatrix}A{v}^{1} & \ldots & A{v}^{n}\end{bmatrix} \begin{bmatrix}{\lambda}_{1} \\ \vdots \\ {\lambda}_{n}\end{bmatrix}
+			\end{equation}		
+			But by Diagonalisation, $AM = M\Lambda$
+			\begin{equation}\label{q7bAhatLambda}
+				\hat{A}{[M\Lambda]}_{M} = \Lambda {[M \Lambda]}_{M} \Rightarrow \hat{A} = \Lambda
 			\end{equation}
-%			From the theorem on matrix representation, we know that ${[L(x)]}_{v} = A{[x]}_{u}$. \\ So, above equation can be rewitten as, 
-%			\begin{equation}
-%				\hat{A}{[\Lambda]}_{M} = {[{\lambda}_{1}L({v}^{1}) + \ldots + {\lambda}_{n}L({v}^{n})]}_{M}
-%			\end{equation}
-			\begin{equation}
-				{[A\Lambda]}_{M} = {[{\lambda}_{1}A{v}^{1} + \ldots + {\lambda}_{n}A{v}^{n}]}_{M}
-			\end{equation}
-			\begin{equation}
-				{[A\Lambda]}_{M} = {[{\lambda}_{1}A{v}^{1}]}_{M} + \ldots + {[{\lambda}_{n}A{v}^{n}]}_{M}
-			\end{equation}
+			
+			Now, it is given that $L(x) = Ax$. Substituting $x$ as $M$, 
+			\begin{equation} L(M) = AM \end{equation}
+			Substituting the matrix representation of $L$, 
+			\begin{equation} \hat{A}{[M]}_{M} = AM \end{equation}
+			But from ${Eq}^{n}$ ~\ref{q7bAhatLambda}, $\hat{A} = \Lambda$ and ${[M]}_{M} = M$
+			\begin{equation} \Lambda M = AM\end{equation}
+			\begin{equation} \Rightarrow \Lambda  = {M}^{-1}AM\end{equation}
+			
+			$\therefore$ The given matrix $A$ is similar to a diagonal matrix $\Lambda$.
 			
 	\end{qalist}
 \end{document}
