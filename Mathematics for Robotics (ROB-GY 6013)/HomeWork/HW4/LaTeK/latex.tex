@@ -270,13 +270,37 @@
 		\item[Answer:] 	
 		\item[Question: 6.(b)] \setcounter{equation}{0}
 		\item[Answer:] 	
-		\item[Question: 8.] \setcounter{equation}{0}
+		\item[Question: 8.] \setcounter{equation}{0} A norm $||\cdot||$ on a vector space $(\mathcal{X}, \mathbb{R})$ is said to be strict when $||x+y|| = ||x|| + ||y||$ holds if and only if there exists a non-negative constant $\alpha$ such that either $y = \alpha x$ or $x = \alpha y$. One then says that $(\mathcal{X}, \mathbb{R}, ||\cdot||)$ is strictly normed. Suppose that $(\mathcal{X}, \mathbb{R}, ||\cdot||)$ is strictly normed. Let $M$ be a subspace of $\mathcal{X}$ and suppose that $x \in \mathcal{X}$ is such that $d(x,M) > 0$. Show that there exists ${m}^{*} \in M$ such that \[||x - {m}^{*}|| = d(x,M) := \text{inf}_{y\in M} ||x-y||\] then ${m}^{*}$ is unique.
 		\item[Answer:] 	
-		\item[Question: 9.(a)] \setcounter{equation}{0}
-		\item[Answer:] 	
-		\item[Question: 9.(b)] \setcounter{equation}{0}
-		\item[Answer:] 	
-		\item[Question: 9.(c)] \setcounter{equation}{0}
-		\item[Answer:] 	
+%		
+%		\item[Question: 9.(a)] \setcounter{equation}{0}
+%		\item[Answer:] 	Given ${||x||}_{1} = |{x}_{1}| +|{x}_{2}|$. Let $x = \begin{bmatrix}2 \\ 3\end{bmatrix}$ and $y=\begin{bmatrix}4 \\ 5\end{bmatrix}$.
+%			First let us find ${||x+y||}_{1} \rightarrow$
+%			\begin{align}
+%				x+y &= \begin{bmatrix}2+4 \\ 3+5\end{bmatrix} = \begin{bmatrix}6 \\ 8\end{bmatrix} \\
+%				{||x+y||}_{1} &= |6| + |8| = 14 \label{eq:q9alhs}
+%			\end{align}
+%			Now let us find ${||x||}_{1} + {||y||}_{1} \rightarrow$
+%			\begin{align}
+%				{||x||}_{1} &= |2| + |3| = 5 \\
+%				{||y||}_{1} &= |4| + |5| = 9\\
+%				{||x||}_{1} + {||y||}_{1} &= 5 + 9 = 14 \label{eq:q9arhs}
+%			\end{align}
+%			From ${Eq}^{n}(\ref{eq:q9alhs}) = {Eq}^{n}(\ref{eq:q9arhs})$ and the non-existance of an $\alpha$ s.t. $y=\alpha x$ or $x = \alpha y $, we can say that ${||x||}_{1}$ is \underline{\emph{not} strictly normed}.
+%			
+%		\item[Question: 9.(c)] \setcounter{equation}{0} 
+%		\item[Answer:] 	Given ${||x||}_{\infty} = max\{{x}_{1},{x}_{2}\}$. Let $x = \begin{bmatrix}2 \\ 3\end{bmatrix}$ and $y=\begin{bmatrix}4 \\ 5\end{bmatrix}$.
+%			First let us find ${||x+y||}_{\infty} \rightarrow$
+%			\begin{align}
+%				x+y &= \begin{bmatrix}2+4 \\ 3+5\end{bmatrix} = \begin{bmatrix}6 \\ 8\end{bmatrix} \\
+%				{||x+y||}_{\infty} &= max\{|6|,|8|\} = 8\label{eq:q9clhs}
+%			\end{align}
+%			Now let us find ${||x||}_{\infty} + {||y||}_{\infty} \rightarrow$
+%			\begin{align}
+%				{||x||}_{\infty} &= max\{|2|,|3|\} = 3 \\
+%				{||y||}_{\infty} &= max\{|4|,|5|\} = 5 \\
+%				{||x||}_{\infty} + {||y||}_{\infty} &= 3+5 = 8 \label{eq:q9crhs}
+%			\end{align}
+%			From ${Eq}^{n}(\ref{eq:q9clhs}) = {Eq}^{n}(\ref{eq:q9crhs})$ and the non-existance of an $\alpha$ s.t. $y=\alpha x$ or $x = \alpha y $, we can say that ${||x||}_{\infty}$ is \underline{\emph{not} strictly normed}.
 	\end{qalist}
 \end{document}
