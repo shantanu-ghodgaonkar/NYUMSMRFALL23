@@ -1,0 +1,127 @@
+\documentclass[a4paper]{article}
+%\usepackage{enumitem, amsmath, gensymb, graphicx, caption, amssymb, geometry, fancyhdr, arydshln, adjustbox}
+\usepackage{enumitem, amsmath, geometry, fancyhdr, arydshln, amssymb}
+
+\geometry{left=1in, right=1in, top=1in, bottom=1in}
+\pagestyle{fancy}
+
+\newcommand{\myName}{\textbf{Shantanu Ghodgaonkar}\\\textit{Univ ID}: N11344563\\\textit{Net ID}: sng8399\\\textit{Ph.No.}: +1 (929) 922-0614}
+\newlist{qalist}{description}{1}
+\setlist[qalist]{style=unboxed,leftmargin=0.5cm,labelwidth=2.5cm}
+
+
+\title{Homework 4 Answers : ROB-GY 6003}
+\author{\myName}
+\date{\today}
+
+\fancyhead{} % Clear existing header settings 
+\fancyhead[L]{\today}
+\fancyhead[R]{N11344563}
+
+
+\begin{document}
+	
+	\begin{titlepage}
+	    \centering
+	    \vspace{2cm}
+	    \Huge\textbf{Foundations of Robotics \\ ROB-GY 6003 \\ Homework 4 Answers}
+	    \vspace{1cm}
+	    \\ \Large \today
+	    \vfill 
+	    \Large \myName
+	\end{titlepage}
+	
+	\begin{qalist}			
+		\item[Question: 5.4] \setcounter{equation}{0} %8
+		\item[Answer:] In the \emph{position domain}, the Jacobian maps the velocities in $X$ to $Y$, 
+			\begin{equation} \label{eq:q5_4_posDomain}\dot{Y} = J(X) \dot{X} \end{equation}
+			Similarly in the \emph{force domain}, the Jacobian maps the force $\mathcal{F}$ to the torque $\tau$, 
+			\begin{equation}\label{eq:q5_4_frcDomain} \tau = {J}^{T} \mathcal{F}\end{equation}
+			And by definition of a Singularity, $Det(J) = 0 \rightarrow J \textit{ loses full rank}$. But as $J$ is common in ${Eq}^{n}$ (\ref{eq:q5_4_posDomain}) and (\ref{eq:q5_4_frcDomain}), we can say that \emph{singularities in the force domain exist at the same configurations as
+singularities in the position domain}.
+			
+		\item[Question: 5.8] \setcounter{equation}{0} %18
+		\item[Answer:] We know that the Jacobian of the given two-link planar manipulator is given by, 
+			\begin{equation}\label{eq:q5_8_jacobian}
+				J = \begin{bmatrix}{l}_{1}{s}_{2} & 0 \\ {l}_{1}{c}_{2}+{l}_{2} & {l}_{2}\end{bmatrix}
+			\end{equation}
+			
+			For above ${Eq}^{n}$(\ref{eq:q5_8_jacobian}) to be isotropic (\emph{i.e. columns are orthogonal and of equal magnitude}), 
+			\begin{equation}\label{eq:q5_8_jacobianIso}
+				J' = \begin{bmatrix}{l}_{2} & 0 \\ 0 & {l}_{2}\end{bmatrix}
+			\end{equation}
+			
+			Equating $J$ and $J'$, we get, 
+			\begin{align}
+				{l}_{1}{s}_{2} &= {l}_{2} \\
+				{l}_{1}{c}_{2}+{l}_{2} &= 0
+			\end{align}
+			
+			Simplifying above ${Eq}^{n}s$ we get, 
+			\begin{align}
+				{s}_{2} &= \frac{{l}_{2}}{{l}_{1}} \\
+				{c}_{2} &= -\frac{{l}_{2}}{{l}_{1}}
+			\end{align}
+			
+			But W.K.T., $ {\sin}^{2}\theta + {\cos}^{2}\theta = 1$
+			\begin{align}
+				\Rightarrow {{s}_{2}}^{2} + {{c}_{2}}^{2} &= 1 \\
+				{\left(\frac{{l}_{2}}{{l}_{1}}\right)}^{2} + {\left(-\frac{{l}_{2}}{{l}_{1}}\right)}^{2} &= 1 \\
+				2{({l}_{2})}^{2} &= {({l}_{1})}^{2} \\
+				{l}_{1} &= \pm \sqrt{2}~{l}_{2} \\
+				\Rightarrow {s}_{2} &= \pm \frac{1}{\sqrt{2}} 
+			\end{align}
+			
+			$\therefore$ We can say that an isotropic point exists when ${l}_{1} = \sqrt{2}~{l}_{2}$ and ${\theta}_{2} = \pm 0.7854$ rad.
+		
+		\newpage
+		
+		\item[Question: 5.11] \setcounter{equation}{0} %14
+		\item[Answer:] Given,
+			\begin{align} {}^{A}T_{B} &= 
+				\begin{bmatrix}0.866 & -0.5 & 0 & 10 \\ 0.5 & 0.866 & 0 & 0 \\ 0 & 0 & 1 & 5 \\ 0 & 0 & 0 & 1\end{bmatrix} ,\; {}^{A}V_{A} = \begin{bmatrix}0 \\ 2 \\ -3 \\ 1.414 \\ 1.414 \\ 0 \end{bmatrix} \\ \notag\\
+				\Rightarrow {}^{A}R_{B} &= \begin{bmatrix}0.866 & -0.5 & 0\\ 0.5 & 0.866 & 0\\ 0 & 0 & 1\end{bmatrix} ,\; {}^{A}P_{BORG} = \begin{bmatrix}10\\ 0\\5\end{bmatrix} \\ \notag\\
+				\Rightarrow {}^{B}R_{A} &= \begin{bmatrix} 0.866 & 0.5 & 0\\-0.5 & 0.866 & 0 \\ 0 & 0 & 1\end{bmatrix} ,\; {}^{A}P_{BORG}\times = \begin{bmatrix}0 & -5 & 0 \\ 5 & 0 & -10 \\ 0 & 10 & 0\end{bmatrix} \\ \notag\\
+				\Rightarrow {}^{B}T_{\textit{v}A} &= \left[\begin{array}{c:c} \\{}^{B}R_{A} & - {}^{B}R_{A}  {}^{A}P_{BORG}\times \\ \\ \hdashline \\ 0 &  {}^{B}R_{A} \\ \;\end{array} \right] = \begin{bmatrix}0.866 & 0.5 & 0 & -2.5001 & 4.3302 & 5.0002 \\ -0.5 & 0.866 & 0 & -4.3302 & -2.5001 & 8.6604 \\ 0 & 0 & 1 & 0 & -10 & 0 \\ 0 & 0 & 0 & 0.866 & 0.5 & 0 \\ 0 & 0 & 0 & -0.5 & 0.866 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1\end{bmatrix} \\ \notag\\ \text{W.K.T.,} {}^{B}V_{B} &= {}^{B}T_{\textit{v}A} {}^{A}V_{A}\\ \notag \\ 
+				\Rightarrow {}^{B}V_{B} &= \begin{bmatrix}0.866 & 0.5 & 0 & -2.5001 & 4.3302 & 5.0002 \\ -0.5 & 0.866 & 0 & -4.3302 & -2.5001 & 8.6604 \\ 0 & 0 & 1 & 0 & -10 & 0 \\ 0 & 0 & 0 & 0.866 & 0.5 & 0 \\ 0 & 0 & 0 & -0.5 & 0.866 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1\end{bmatrix}  \begin{bmatrix}0 \\ 2 \\ -3 \\ 1.414 \\ 1.414 \\ 0 \end{bmatrix} = \begin{bmatrix}3.5878 \\ -7.9260 \\ -17.1400 \\ 1.9316 \\ 0.5175 \\ 0\end{bmatrix}
+			\end{align}
+		
+		\item[Question: 5.13] \setcounter{equation}{0} %9
+		\item[Answer:] Given, 
+			\begin{equation} \label{eq:q5_13_given}
+				{}^{0}J(\Theta) = \begin{bmatrix} -{l}_{1}{s}_{1}-{l}_{2}{s}_{12} & -{l}_{2}{s}_{12} \\ {l}_{1}{c}_{1} + {l}_{2}{c}_{12} & {l}_{2}{c}_{12} \end{bmatrix} ,\; {}^{0}\mathcal{F} = 10 {\hat{X}}_{0}
+			\end{equation}
+			W.K.T., 
+			\begin{equation}\label{eq:q5_13_formula}\tau = {J}^{T} \mathcal{F}\end{equation}
+			Substituting ${Eq}^{n}$ (\ref{eq:q5_13_given}) in (\ref{eq:q5_13_formula})
+			\begin{align}
+				\tau &=  \begin{bmatrix} -{l}_{1}{s}_{1}-{l}_{2}{s}_{12} &  {l}_{1}{c}_{1} + {l}_{2}{c}_{12} \\ -{l}_{2}{s}_{12} & {l}_{2}{c}_{12} \end{bmatrix} \begin{bmatrix} 10 \\ 0\end{bmatrix} \\
+				&= \begin{bmatrix} -10{l}_{1}{s}_{1}-10{l}_{2}{s}_{12} \\ -10{l}_{2}{s}_{12}\end{bmatrix}
+			\end{align}
+		
+		\newpage
+		
+		\item[Question: 5.16] \setcounter{equation}{0} %20
+		\item[Answer:] We know that for Z-Y-Z Euler angles, the rotation matrix is given by - 
+			\begin{equation} \label{eq:q5_16_zyzRotMat}
+				{}^{A}_{B}{R}_{Z'Y'Z'}({\theta}_{1}, {\theta}_{3}, {\theta}_{3}) = \begin{bmatrix}{c}_{1}{c}_{2}{c}_{3} - {s}_{1}{s}_{3} & -{c}_{1}{c}_{2}{s}_{3}-{s}_{1}{c}_{3} & {c}_{1}{s}_{2} \\ {s}_{1}{c}_{2}{c}_{3} - {c}_{1}{s}_{3} & -{s}_{1}{c}_{2}{s}_{3}-{c}_{1}{c}_{3} & {s}_{1}{s}_{2} \\ -{s}_{2}{c}_{3} & {s}_{2}{s}_{3} & {c}_{2}\end{bmatrix}
+			\end{equation}
+			
+			And we also know that, 
+			\begin{align}  \label{eq:q5_16_omegaEqns}
+				{\Omega}_{x} &= \dot{{r}_{31}}{r}_{21} +  \dot{{r}_{32}}{r}_{22} + \dot{{r}_{33}}{r}_{23} \notag \\
+				{\Omega}_{y} &= \dot{{r}_{11}}{r}_{31} + \dot{{r}_{12}}{r}_{32} + \dot{{r}_{13}}{r}_{33}  \\
+				{\Omega}_{z} &= \dot{{r}_{12}}{r}_{11} + \dot{{r}_{22}}{r}_{12} + \dot{{r}_{23}}{r}_{13} \notag 
+			\end{align}
+			
+			Solving for ${Eq}^{n}s$ (\ref{eq:q5_16_zyzRotMat}) and (\ref{eq:q5_16_omegaEqns}), we can find ${E}_{Z'Y'Z'}$ to be - 
+			\begin{equation}
+				{E}_{Z'Y'Z'} = \begin{bmatrix}0 & -{s}_{1} & {c}_{1}{s}_{2} \\ 0 & {c}_{1} & {s}_{1}{s}_{2} \\ 1 & 0 & {c}_{2}\end{bmatrix}
+			\end{equation}
+		
+		\item[Question: 5.20] \setcounter{equation}{0} %20
+		\item[Answer:] A \emph{singularity} is a special condition wherein the determinant of the Jacobian equals zero. It implies that the Jacobian is no longer invertible. In the real world, it just means that the joint corresponding to the Jacobian is stuck in its current orientation. So, we might as well assume that it behaves like a link. 
+		
+			Generalising the above explanation, if we have a $n$-DOF and one of the joints reaches a singularity, it has lost one joint, \emph{i.e. it can be treated as a $n-1$-DOF manipulator.}
+	\end{qalist}
+\end{document}
